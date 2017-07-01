@@ -24,8 +24,6 @@
 </f:if>
 
 
-
-
 		<f:if condition="{infoMsg}">
 			<f:then>
 				<div class="typo3-message message-notice">
@@ -41,13 +39,25 @@
 	        </f:if>
 
 		<div>
-			<f:be.buttons.icon uri="{f:uri.action(controller:'Administration',action:'showCleanup', arguments: {myArg: 'syncPublists'})}" icon="actions-system-refresh" title="sync" /> <f:translate key="LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:publist.sync" />
+			<f:link.action action="showCleanup" controller="Administration" arguments="{myArg : 'syncPublists'}" title="sync">
+				<core:icon identifier="actions-system-refresh" title="sync" />
+			</f:link.action>
+			<f:translate key="LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:publist.sync" />
 			<br />
-			<f:be.buttons.icon uri="{f:uri.action(controller:'Administration',action:'showCleanup', arguments: {myArg: 'cleanUpPublist'})}" icon="actions-edit-delete" title="sync" /> <f:translate key="LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:publist.cleanup" />
+			<f:link.action action="showCleanup" controller="Administration" arguments="{myArg : 'cleanUpPublist'}" title="sync">
+				<f:core:icon identifier="actions-edit-delete" />
+			</f:link.action>
+			<f:translate key="LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:publist.cleanup" />
 			<br />
-			<f:be.buttons.icon uri="{f:uri.action(controller:'Administration',action:'showCleanup', arguments: {myArg: 'cleanupPublications'})}" icon="actions-edit-delete" title="sync" /> <f:translate key="LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:publication.cleanup" />
+			<f:link.action action="showCleanup" controller="Administration" arguments="{myArg : 'cleanupPublications'}" title="sync">
+				<f:core:icon identifier="actions-edit-delete" />
+			</f:link.action>
+			<f:translate key="LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:publication.cleanup" />
 			<br />
-			<f:be.buttons.icon uri="{f:uri.action(controller:'Administration',action:'showCleanup', arguments: {myArg: 'cleanupDeletedPublications'})}" icon="actions-edit-delete" title="sync" /> <f:translate key="LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:publication.cleanup.deleted" />
+			<f:link.action action="showCleanup" controller="Administration" arguments="{myArg : 'cleanupDeletedPublications'}" title="sync">
+				<f:core:icon identifier="actions-edit-delete" />
+			</f:link.action>
+			<f:translate key="LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:publication.cleanup.deleted" />
 		</div>
 
 	        <h4 class="uppercase">
@@ -88,5 +98,3 @@
 		</div>
        </f:then>
 </f:if>
-
-

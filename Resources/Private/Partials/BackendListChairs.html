@@ -36,10 +36,16 @@
 
 			<div>
 <f:comment>
-				<f:translate key="LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:list.refresh" /> <f:be.buttons.icon uri="{f:uri.action(controller:'Administration',action:'listChairs')}" icon="actions-system-refresh" title="sync" />
+				<f:translate key="LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:list.refresh" />
+				<f:link.action action="listChairs" controller="Administration" title="list">
+					<core:icon identifier="actions-system-refresh" />
+				</f:link.action>
 				<br />
 </f:comment>
-				<f:translate key="LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:list.sync" /> <f:be.buttons.icon uri="{f:uri.action(controller:'Administration',action:'syncChairs')}" icon="actions-document-synchronize" title="sync" />
+				<f:translate key="LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:list.sync" />
+				<f:link.action action="syncChairs" controller="Administration" title="sync">
+					<core:icon identifier="actions-document-synchronize" />
+				</f:link.action>
 			</div>
 
 		        <h4 class="uppercase">
@@ -122,15 +128,22 @@
 		        </h4>
 
 			<div>
-				<f:be.buttons.icon uri="{f:uri.action(controller:'Institute',action:'add')}" icon="actions-edit-add" title="add" /> add one Institute (6000)
+				<f:link.action action="add" controller="Institute" title="add">
+					<core:icon identifier="actions-edit-add" /> add one Institute (6000)
+				</f:link.action>
 				<br />
-				<f:be.buttons.icon uri="{f:uri.action(controller:'Institute',action:'delete')}" icon="actions-edit-delete" title="delete" /> del one Institute (first from DB table)
+				<f:link.action action="delete" controller="Institute" title="delete">
+					<core:icon identifier="actions-edit-delete" /> del one Institute (first from DB table)
+				</f:link.action>
 				<br />
-				<f:be.buttons.icon uri="{f:uri.action(controller:'Chair',action:'add')}" icon="actions-edit-add" title="add" /> add one chair (6000)
+				<f:link.action action="add" controller="Chair" title="add">
+					<core:icon identifier="actions-edit-add" /> add one chair (6000)
+				</f:link.action>
 				<br />
-				<f:be.buttons.icon uri="{f:uri.action(controller:'Chair',action:'delete')}" icon="actions-edit-delete" title="delete" /> del one chair (first from DB table)
+				<f:link.action action="delete" controller="Chair" title="delete">
+					<core:icon identifier="actions-edit-delete" /> del one chair (first from DB table)
+				</f:link.action>
 			</div>
 </f:comment>
 		</f:else>
         </f:if>
-
