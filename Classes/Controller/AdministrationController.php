@@ -96,7 +96,7 @@ class AdministrationController extends BasicPublistController {
 
 		// check if storagePid is set
 		if ($this->settings['storagePid'] <= 0) {
-//			$this->errorHandler->setError(1, 'storagePid <= 0, NOT allowed. Please create a sysFolder in Backend for storing Publicationlists and add the PID to your TypoScript Constants like "plugin.tx_publist4ubma2_pi1.storagePid = PID"');
+			\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings);
 			$this->errorHandler->setError(1, \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('errorZeroStoragePid', 'publist4ubma2'));
 			$this->view->assign('errorMsg', $this->errorHandler->getErrorMsg());
 			return;
@@ -166,6 +166,7 @@ class AdministrationController extends BasicPublistController {
 	public function listPublicationsAction() {
 		// check if storagePid is set
 		if ($this->settings['storagePid'] <= 0) {
+			\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings);
 			$this->errorHandler->setError(1, \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('errorZeroStoragePid', 'publist4ubma2'));
 			$this->view->assign('errorMsg', $this->errorHandler->getErrorMsg());
 			return;
