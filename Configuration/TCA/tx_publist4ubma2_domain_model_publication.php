@@ -20,13 +20,13 @@ return array(
 			'endtime' => 'endtime',
 		),
 		'searchFields' => 'eprint_id,title,abstract,url_offical,url_ubma_extern,used_link_url,url,year,bib_type,volume,publisher,rev_number,publication,editors,creators,corp_creators,ubma_book_editor,event_location,place_of_pub,page_range,issn,isbn,ubma_tags,ubma_edition,book_title,used_coin,',
-		'iconfile' => 'EXT:publist4ubma2/Resources/Public/Icons/tx_publist4ubma2_domain_model_publication.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('publist4ubma2') . 'Resources/Public/Icons/tx_publist4ubma2_domain_model_publication.gif'
 	),
 	'interface' => array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, eprint_id, title, abstract, url_offical, url_ubma_extern, used_link_url, url, year, bib_type, volume, publisher, rev_number, publication, editors, creators, corp_creators, ubma_book_editor, event_location, place_of_pub, page_range, issn, isbn, ubma_tags, ubma_edition, book_title, used_coin',
 	),
 	'types' => array(
-		'1' => array('columnsOverrides' => array('sys_language_uid' => array('defaultExtras' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, eprint_id, title, abstract, url_offical, url_ubma_extern, used_link_url, url, year, bib_type, volume, publisher, rev_number, publication, editors, creators, corp_creators, ubma_book_editor, event_location, place_of_pub, page_range, issn, isbn, ubma_tags, ubma_edition, book_title, used_coin, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'))),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, eprint_id, title, abstract, url_offical, url_ubma_extern, used_link_url, url, year, bib_type, volume, publisher, rev_number, publication, editors, creators, corp_creators, ubma_book_editor, event_location, place_of_pub, page_range, issn, isbn, ubma_tags, ubma_edition, book_title, used_coin, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -88,6 +88,7 @@ return array(
 			'config' => array(
 				'type' => 'input',
 				'size' => 13,
+				'max' => 20,
 				'eval' => 'datetime',
 				'checkbox' => 0,
 				'default' => 0,
@@ -103,6 +104,7 @@ return array(
 			'config' => array(
 				'type' => 'input',
 				'size' => 13,
+				'max' => 20,
 				'eval' => 'datetime',
 				'checkbox' => 0,
 				'default' => 0,
