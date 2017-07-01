@@ -26,7 +26,7 @@ http://ub-madoc.bib.uni-mannheim.de/',
 	'version' => '0.1.1',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '6.2.0-7.6.99',
+			'typo3' => '7.5.0-8.9.99',
 		),
 		'conflicts' => array(
 		),
