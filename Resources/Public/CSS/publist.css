@@ -66,6 +66,4 @@
 	text-align: right;
 }
 
-
 .myenumlist li:before { content:counter(indexCounter) ". ";}
-
