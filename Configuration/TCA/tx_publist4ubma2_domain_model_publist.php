@@ -20,13 +20,13 @@ return array(
 			'endtime' => 'endtime',
 		),
 		'searchFields' => 'ce_id,query_url,publications,flexform_md5,exclude_external,',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('publist4ubma2') . 'Resources/Public/Icons/tx_publist4ubma2_domain_model_publist.gif'
+		'iconfile' => 'EXT:publist4ubma2/Resources/Public/Icons/tx_publist4ubma2_domain_model_publist.gif'
 	),
 	'interface' => array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, ce_id, query_url, publications, flexform_md5,exclude_external',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, ce_id, query_url, publications, flexform_md5, exclude_external, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('columnsOverrides' => array('sys_language_uid' => array('defaultExtras' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, ce_id, query_url, publications, flexform_md5, exclude_external, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'))),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),

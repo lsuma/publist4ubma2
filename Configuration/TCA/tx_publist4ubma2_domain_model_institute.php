@@ -20,13 +20,13 @@ return array(
 			'endtime' => 'endtime',
 		),
 		'searchFields' => 'id,name_en,name_de,',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('publist4ubma2') . 'Resources/Public/Icons/tx_publist4ubma2_domain_model_institute.gif'
+		'iconfile' => 'EXT:publist4ubma2/Resources/Public/Icons/tx_publist4ubma2_domain_model_institute.gif'
 	),
 	'interface' => array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, id, name_en, name_de',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, id, name_en, name_de, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('columnsOverrides' => array('sys_language_uid' => array('defaultExtras' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, id, name_en, name_de, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'))),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
