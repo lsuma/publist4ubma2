@@ -1,6 +1,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en" 
      xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
+{namespace cssfile=Unima\Publist4ubma2\ViewHelpers}
 {namespace m=Unima\Publist4ubma2\ViewHelpers}
 
 <f:layout name="General" />
@@ -8,8 +9,7 @@
 
 <f:section name="content">
 <f:comment>
-We have no "n" viewhelper
-	<n:includeFile path="typo3conf/ext/publist4ubma2/Resources/Public/CSS/publist.css" />
+	<cssfile:includeFile path="EXT:publist4ubma2/Resources/Public/CSS/publist.css" />
 </f:comment>
 
 	<f:if condition="{errorMsg}">
