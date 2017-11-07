@@ -96,6 +96,7 @@ class AdministrationController extends BasicPublistController {
 
 		// check if storagePid is set
 		if ($this->settings['storagePid'] <= 0) {
+			\TYPO3\CMS\Core\Utility\DebugUtility::debug($this->settings);
 			\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings);
 			$this->errorHandler->setError(1, \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('errorZeroStoragePid', 'publist4ubma2'));
 			$this->view->assign('errorMsg', $this->errorHandler->getErrorMsg());

@@ -1,0 +1,8 @@
+{namespace m=Unima\Publist4ubma2\ViewHelpers}
+
+	<f:comment><input id="publist4ubma-filter-{data.uid}" class="publist4ubma2-filter" data-publist-content="tabs-content-{data.uid}" type="text" value="" /></f:comment>
+	<ul class="tabs" data-tabs id="tabs-{data.uid}">
+		<f:for each="{types}" as="type" iteration="iteratorTypes">
+			<li class="tabs-title{f:if(condition: iteratorTypes.isFirst, then: ' is-active')}"><a href="#tab-{data.uid}-{type}"><f:translate key='{type}' /></a></li>
+		</f:for>
+	</ul>

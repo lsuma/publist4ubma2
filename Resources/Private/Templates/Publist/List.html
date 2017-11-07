@@ -13,25 +13,25 @@
 </f:comment>
 
 	<f:if condition="{errorMsg}">
-                <f:then>
+		<f:then>
 			<div class="publist4ubma2_error">
-                                        "{errorMsg}"
-                        </div>
-                </f:then>
-        </f:if>
+					"{errorMsg}"1
+			</div>
+		</f:then>
+	</f:if>
 	<f:if condition="{infoMsg}">
-                <f:then>
+		<f:then>
 			<div class="publist4ubma2_info">
-                                        "{infoMsg}"
-                        </div>
-                </f:then>
-        </f:if>
+					"{infoMsg}"2
+			</div>
+		</f:then>
+	</f:if>
 	<f:if condition="{settings.debug}==1">
 		<f:render partial="DisplayFlexFormConfig" arguments="{_all}" />
 	</f:if>
 
 	<f:if condition="{content}">
-        	<f:then>
+		<f:then>
 			<f:if condition="{settings.enumerate}==0">
 				<f:then>
 					<div>
@@ -46,16 +46,20 @@
 					<f:switch expression="{settings.splittypes}">
 						<f:case value="0">
 								<f:render partial="PrintPublications" arguments="{settings: '{settings}', content: '{content}', years: '{years}', types: '{types}'}" />
-								</f:case>
+						</f:case>
 						<f:case value="1"><f:render partial="TypeItem" arguments="{_all}" /></f:case>
 						<f:case value="2">
 								<f:render partial="TypeMenu" arguments="{_all}" />
 								<f:render partial="PrintPublications" arguments="{settings: '{settings}', content: '{content}', years: '{years}', types: '{types}', thisType: '{curType}'}" />
 								<f:render partial="TypeMenu" arguments="{_all}" />
-								</f:case>
+						</f:case>
+						<f:case value="3">
+								<f:render partial="TypeTabMenu" arguments="{_all}" />
+								<f:render partial="TypeTabItem" arguments="{_all}" />
+						</f:case>
 						<f:case default="TRUE">
 								<f:render partial="PrintPublications" arguments="{settings: '{settings}', content: '{content}', years: '{years}', types: '{types}'}" />
-								</f:case>
+						</f:case>
 					</f:switch>
 				</f:then>
 			</f:if>
@@ -69,10 +73,14 @@
 								<f:render partial="TypeMenu" arguments="{_all}" />
 								<f:render partial="YearItem" arguments="{_all}" />
 								<f:render partial="TypeMenu" arguments="{_all}" />
-								</f:case>
+						</f:case>
+						<f:case value="3">
+								<f:render partial="TypeTabMenu" arguments="{_all}" />
+								<f:render partial="TypeTabItem" arguments="{_all}" />
+						</f:case>
 						<f:case default="TRUE">
 								<f:render partial="PrintPublications" arguments="{settings: '{settings}', content: '{content}', years: '{years}', types: '{types}'}" />
-								</f:case>
+						</f:case>
 					</f:switch>
 				</f:then>
 			</f:if>
@@ -111,23 +119,23 @@
 					<div class="tx_publist4ubma2-right"><a href="{bibtexturl}" target="_blank">[BibTex]</a></div>
 				</f:then>
 			</f:if>
-       	        </f:then>
-        </f:if>
+		</f:then>
+	</f:if>
 
 
 
 
 	<f:if condition="{debugMsg}">
-                <f:then>
+		<f:then>
 			<div class="publist4ubma2_debug">
 				<ul>
 					<f:for each="{debugMsg}" as="line">
 						<li>Debug: {line}</li>
 					</f:for>
 				</ul>
-                        </div>
-                </f:then>
-        </f:if>
+			</div>
+		</f:then>
+	</f:if>
 
 
 </f:section>

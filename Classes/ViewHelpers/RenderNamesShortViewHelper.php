@@ -32,8 +32,7 @@ class RenderNamesShortViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\Abstra
 	public function render($somebody)
 	{
 		$output = '';
-
-		if (strpos($somebody, ";") >= 0) {
+		if (strpos($somebody, ";") !== FALSE) {
 			$peopleList = explode( ';', $somebody);
 			$peopleNumber = count($peopleList);
 			$i = 1;
@@ -56,12 +55,11 @@ class RenderNamesShortViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\Abstra
 
 		}
 		else {
-			if ( $editor = explode(',', $somebody))
+			if ( trim($somebody) && ($theName = explode(',', $somebody)))
 				$output .= $theName[0] . ', ' . substr($theName[1], 0, 1) . '.';
 		}
-		return $output;	
+		return $output;
 	}
 }
 
 ?>
-

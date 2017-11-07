@@ -45,12 +45,12 @@
 }
 
 .tx_publist4ubma-ol li {
-        margin-bottom: 0.25em;
+	margin-bottom: 0.25em;
 }
 
 
 #initEnumeration {
-   counter-reset: indexCounter;
+	counter-reset: indexCounter;
 }
 
 .myenumlist { padding: 0; margin: 0; }
@@ -67,3 +67,108 @@
 }
 
 .myenumlist li:before { content:counter(indexCounter) ". ";}
+
+
+.tx_publist4ubma2 .tabs {
+	border: 0;
+	margin-bottom:-20px;
+}
+
+.tx_publist4ubma2 .tabs li {
+	list-style:none !important;
+	margin:0 10px 20px 0 !important;
+	background:#dbe6cd;
+	/*float:left;*/
+}
+
+.tx_publist4ubma2 .tabs li::before {
+	display:none !important;
+}
+
+.tx_publist4ubma2 div.tabs-content>div>ul {
+	margin:0 !important;
+}
+
+.tx_publist4ubma2 .tabs li a {
+	border-color:#6b8845;
+	padding:1rem 1.25rem;
+	font-size:.875rem;
+}
+
+.tx_publist4ubma2 .tabs li.is-active a {
+	background:#6b8845;
+	color:#fff;
+	position:relative;
+}
+
+.tx_publist4ubma2 .tabs li a::after {
+	content:' ';
+	display:block;
+	height:0;
+	width:0;
+	border-top:14px solid #6b8845;
+	border-left:14px solid transparent;
+	border-right:14px solid transparent;
+	border-bottom:0;
+	position:absolute;
+	bottom:0;
+	opacity:0;
+	left:calc(50% - 14px);
+	transition:0.4s all;
+}
+
+.tx_publist4ubma2 .tabs li.is-active a::after {
+	opacity:1;
+	bottom:-14px;
+}
+
+.tx_publist4ubma2 div.tabs-content {
+	border:1px solid #f5f6f9;
+}
+
+.tx_publist4ubma2 h4 {
+	font-weight:normal;
+	padding:0.5rem 1.5rem;
+	border-bottom:3px solid #dbe6cd;
+	margin-bottom:1rem;
+	width:calc(100% + 2rem);
+	position:relative;
+	left:-1rem;
+}
+
+/*.tx_publist4ubma2 .tabs li a {
+	border:1px solid #ccc;
+	border-bottom:0;
+	padding:10px;
+	padding-bottom:13px;
+	float:left;
+	margin-right:10px;
+}
+
+.tx_publist4ubma2 .tabs li.is-active a {
+	border-bottom:3px solid #6b8845 !important;
+	padding-bottom:10px;
+	float:left;
+}
+
+.tx_publist4ubma2 div.tabs-content {
+	list-style:none;
+	margin:0;
+	padding:20px;
+	border:1px solid #ccc;
+}
+
+.tx_publist4ubma2 div.tabs-content>div {
+	display:none;
+	list-style:none;
+	margin:0 !important;
+}
+
+.tx_publist4ubma2 div.tabs-content>li::before, .tx_publist4ubma2 ul.tabs-content>li>ul::before {
+	content:'';
+	display:none !important;
+}
+
+.tx_publist4ubma2 div.tabs-content>div.is-active {
+	display:block;
+}*/

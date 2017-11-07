@@ -714,11 +714,11 @@
             <numIndex index="0">LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:pi1_flexform.splityears.0</numIndex>
             <numIndex index="1">0</numIndex>
          </numIndex>
-         <numIndex    index="1" type="array">
+         <numIndex index="1" type="array">
             <numIndex index="0">LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:pi1_flexform.splityears.1</numIndex>
             <numIndex index="1">1</numIndex>
          </numIndex>
-         <numIndex    index="2" type="array">
+         <numIndex index="2" type="array">
             <numIndex index="0">LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:pi1_flexform.splityears.2</numIndex>
             <numIndex index="1">2</numIndex>
          </numIndex>
@@ -741,13 +741,17 @@
             <numIndex index="0">LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:pi1_flexform.splittypes.0</numIndex>
             <numIndex index="1">0</numIndex>
          </numIndex>
-         <numIndex    index="1" type="array">
+         <numIndex index="1" type="array">
             <numIndex index="0">LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:pi1_flexform.splittypes.1</numIndex>
             <numIndex index="1">1</numIndex>
          </numIndex>
-         <numIndex    index="2" type="array">
+         <numIndex index="2" type="array">
             <numIndex index="0">LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:pi1_flexform.splittypes.2</numIndex>
             <numIndex index="1">2</numIndex>
+         </numIndex>
+         <numIndex index="3" type="array">
+            <numIndex index="0">LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_be.xlf:pi1_flexform.splittypes.3</numIndex>
+            <numIndex index="1">3</numIndex>
          </numIndex>
         </items>
         <maxitems>1</maxitems>

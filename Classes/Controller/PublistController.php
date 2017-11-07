@@ -54,9 +54,13 @@ class PublistController extends BasicPublistController {
 	 */
 	protected $publicationController = NULL;
 
-
 	protected $sessionData = array('year' => 0, 'type' => "");
 
+	protected $contentByTypes = [];
+
+	protected $contentByYears = [];
+
+	protected $contentByTypesAndYears = [];
 
 
 	/**
@@ -67,6 +71,7 @@ class PublistController extends BasicPublistController {
 	public function listAction() {
 
 		//$debugger = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Unima\\Publist4ubma2\\Service\\DebugCollector');
+		$GLOBALS['TSFE']->additionalFooterData['tx_'.$this->request->getControllerExtensionKey()] = '<script type="text/javascript" src="' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/publist4ubma2.js"></script>';
 		$this->debugger->add('Started PublistController listAction');
 
 		// check, if ContentElement is already in DB
@@ -85,8 +90,9 @@ class PublistController extends BasicPublistController {
 		$content = $this->getPublicationsFromList($cElementId);
 		if ($this->errorHandler->getError()) {
 			$this->view->assign('errorMsg', $this->errorHandler->getErrorMsg());
-			if ($this->settings['debug'])
+			if ($this->settings['debug']) {
 				$this->view->assign('debugMsg', $this->debugger->get());
+			}
 			return;
 		}
 		//\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($content);
@@ -94,6 +100,9 @@ class PublistController extends BasicPublistController {
 		// sorting publications
 		$years = $this->listOfYears($content);
 		$types = $this->listOfTypes($content);
+
+		$groupedContent = $this->groupContent($content);
+
 		// sort in the same order as the array $years and $types
 		//$content = $this->sortPublications($content, $years);
 
@@ -102,25 +111,30 @@ class PublistController extends BasicPublistController {
 
 		$this->debugger->add('all OK');
 
-		$this->view->assign('content', $content);
-		$this->view->assign('years', $years);
-		$this->view->assign('types', $types);
-		$this->view->assign('curYear', $this->sessionData['year']);
-		$this->view->assign('curType', $this->sessionData['type']);
+		$this->view->assignMultiple([
+			'data' => $this->configurationManager->getContentObject()->data,
+			'content' => $content,
+			'groupedContent' => $groupedContent,
+			'years' => $years,
+			'types' => $types,
+			'curYear' => $this->sessionData['year'],
+			'curType' => $this->sessionData['type'],
+		]);
 
-		if ($this->settings['bibtex'] > 0)
+		if ($this->settings['bibtex'] > 0) {
 			$this->view->assign('bibtexturl',  queryUrl::generate($this->settings, 1));
+		}
 
-
-		if ($this->settings['debug'])
+		if ($this->settings['debug']) {
 			$this->view->assign('debugMsg', $this->debugger->get());
+		}
 	}
 
 
 	private function getPublicationsFromList($cElementId) {
 		$publist = $this->publistRepository->findFirstByCEid($cElementId);
 		if ($publist === NULL) {
-			$this->errorHandler->setError(1, "Error, not able to find Plubication List in DB for content Element " . $cElementId);
+			$this->errorHandler->setError(1, "Error, not able to find Publication List in DB for Content Element " . $cElementId);
 			return 0;
 		}
 		$publications = $publist->getPublications();
@@ -297,7 +311,40 @@ class PublistController extends BasicPublistController {
 		return $listOfIDs;
 	}
 
+	private function groupContent($content) {
+		// get types from flexform
+		if ($this->settings['useadvancedtypesbytag']) {
+			$confTypes = explode(',', $this->settings['advancedtype']);
+		}
+		else {
+			$confTypes = explode(',', $this->settings['type']);
+		}
 
+		// init grouped content with flexform types to establish correct orde
+		if($this->settings['splittypes']) {
+			foreach($confTypes as $type) {
+				$groupedContent[$type] = [];
+			}
+		}
+
+		foreach($content as $publication) {
+			$type = $publication->getBibType();
+			$year = $publication->getYear();
+			if($this->settings['splittypes'] && $this->settings['splityears'] && $type && $year) {
+				// group by types, then years, add letter y to year index to allow access via FLUID
+				$groupedContent[$type]['y'.$year][] = $publication;
+			}
+			else if($this->settings['splittypes'] && $type) {
+				// group by types only
+				$groupedContent[$type][] = $publication;
+			}
+			else if($this->settings['splityears'] && $year) {
+				// group by years, add letter y to year index to allow access via FLUID
+				$groupedContent['y'.$year][] = $publication;
+			}
+		}
+		return $groupedContent;
+	}
 
 	private function listOfYears($content) {
 		$years = array();

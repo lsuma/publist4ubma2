@@ -94,7 +94,13 @@ class ItemsProcFunc {
 		$result = $repository->findAllByInst($config['config']['my_inst'], $typoscript['storagePid']);
 
 		// copy to config and sort imidily
-		foreach ($result as $index => $institute) {
+		$resultAssoc = [];
+		foreach ($result as $institute) {
+			$resultAssoc[$institute->getNameDe().' '.$institute->getId()] = $institute;
+		}
+		ksort($resultAssoc);
+		$resultArray = array_values($resultAssoc);
+		foreach ($resultArray as $index => $institute) {
 			$config['items'][$index]['0'] = $institute->getNameDe();
 			$config['items'][$index]['1'] = $institute->getId();
 		}
