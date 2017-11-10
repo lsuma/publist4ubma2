@@ -76,8 +76,8 @@
 
 .tx_publist4ubma2 .tabs li {
 	list-style:none !important;
-	margin:0 10px 20px 0 !important;
-	background:#dbe6cd;
+	margin:0 0 20px 0 !important;
+	background:transparent;
 	/*float:left;*/
 }
 
@@ -90,18 +90,31 @@
 }
 
 .tx_publist4ubma2 .tabs li a {
-	border-color:#6b8845;
-	padding:1rem 1.25rem;
-	font-size:.875rem;
+	background:#d1d7df;
+	padding:.3125rem .625rem;
+	font-size:1rem;
+	border-bottom:0;
+	font-weight:bold;
+	line-height:1.8;
+}
+
+.tx_publist4ubma2 .tabs li:first-child a {
+	border-radius:.625rem 0 0 .625rem;
+	-webkit-border-radius:.625rem 0 0 .625rem;
+}
+
+.tx_publist4ubma2 .tabs li:last-child a {
+	border-radius:0 .625rem .625rem 0;
+	-webkit-border-radius:0 .625rem .625rem 0;
 }
 
 .tx_publist4ubma2 .tabs li.is-active a {
-	background:#6b8845;
+	background:#232e58;
 	color:#fff;
 	position:relative;
 }
 
-.tx_publist4ubma2 .tabs li a::after {
+/*.tx_publist4ubma2 .tabs li a::after {
 	content:' ';
 	display:block;
 	height:0;
@@ -115,7 +128,7 @@
 	opacity:0;
 	left:calc(50% - 14px);
 	transition:0.4s all;
-}
+}*/
 
 .tx_publist4ubma2 .tabs li.is-active a::after {
 	opacity:1;
@@ -124,6 +137,7 @@
 
 .tx_publist4ubma2 div.tabs-content {
 	border:1px solid #f5f6f9;
+	clear:both;
 }
 
 .tx_publist4ubma2 h4 {
@@ -135,40 +149,3 @@
 	position:relative;
 	left:-1rem;
 }
-
-/*.tx_publist4ubma2 .tabs li a {
-	border:1px solid #ccc;
-	border-bottom:0;
-	padding:10px;
-	padding-bottom:13px;
-	float:left;
-	margin-right:10px;
-}
-
-.tx_publist4ubma2 .tabs li.is-active a {
-	border-bottom:3px solid #6b8845 !important;
-	padding-bottom:10px;
-	float:left;
-}
-
-.tx_publist4ubma2 div.tabs-content {
-	list-style:none;
-	margin:0;
-	padding:20px;
-	border:1px solid #ccc;
-}
-
-.tx_publist4ubma2 div.tabs-content>div {
-	display:none;
-	list-style:none;
-	margin:0 !important;
-}
-
-.tx_publist4ubma2 div.tabs-content>li::before, .tx_publist4ubma2 ul.tabs-content>li>ul::before {
-	content:'';
-	display:none !important;
-}
-
-.tx_publist4ubma2 div.tabs-content>div.is-active {
-	display:block;
-}*/
