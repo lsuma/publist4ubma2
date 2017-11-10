@@ -1,4 +1,7 @@
-{namespace m=Unima\Publist4ubma2\ViewHelpers}
+<html data-namespace-typo3-fluid="true"
+        xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        xmlns:n="https://typo3.org/ns/Unima/Publist4ubma2/ViewHelpers">
+
 <f:if condition="{editor}!=''">
 	<f:then>
 		<m:myExplode content="{editor}" glue="," as="thename">
@@ -9,4 +12,3 @@
 		</m:myExplode>
 	</f:then>
 </f:if>
-
