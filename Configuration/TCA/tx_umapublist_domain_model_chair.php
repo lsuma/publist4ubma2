@@ -1,8 +1,8 @@
 <?php
 return array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publist',
-		'label' => 'ce_id',
+		'title'	=> 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_chair',
+		'label' => 'id',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -19,14 +19,14 @@ return array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'ce_id,query_url,publications,flexform_md5,exclude_external,',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('publist4ubma2') . 'Resources/Public/Icons/tx_publist4ubma2_domain_model_publist.gif'
+		'searchFields' => 'id,parent,name_en,name_de,',
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('uma_publist') . 'Resources/Public/Icons/tx_umapublist_domain_model_chair.gif'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, ce_id, query_url, publications, flexform_md5,exclude_external',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, id, parent, name_en, name_de',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, ce_id, query_url, publications, flexform_md5, exclude_external, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, id, parent, name_en, name_de, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -55,8 +55,8 @@ return array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_publist4ubma2_domain_model_publication',
-				'foreign_table_where' => 'AND tx_publist4ubma2_domain_model_publication.pid=###CURRENT_PID### AND tx_publist4ubma2_domain_model_publication.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_umapublist_domain_model_chair',
+				'foreign_table_where' => 'AND tx_umapublist_domain_model_chair.pid=###CURRENT_PID### AND tx_umapublist_domain_model_chair.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -113,52 +113,43 @@ return array(
 				),
 			),
 		),
-		'ce_id' => array(
+
+		'id' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publist.ceid',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_chair.id',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
 				'eval' => 'int'
 			)
 		),
-
-		'query_url' => array(
+		'parent' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publist.query_url',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_chair.parent',
 			'config' => array(
-				'type' => 'text',
-				'cols' => 40,
-				'rows' => 15,
+				'type' => 'input',
+				'size' => 4,
+				'eval' => 'int'
+			)
+		),
+		'name_en' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_chair.name_en',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
 				'eval' => 'trim'
 			),
 		),
-		'publications' => array(
+		'name_de' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publist.publications',
-                        'config' => array(
-                                'type' => 'text',
-                                'cols' => 40,
-                                'rows' => 15,
-                                'eval' => 'trim'
-                        ),
-		),
-		'flexform_md5' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publist.ffmd5',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_chair.name_de',
 			'config' => array(
 				'type' => 'input',
-				'size' => 4,
-				'eval' => 'int'
-			)
-		),
-		'exclude_external' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publist.exclude_external',
-			'config' => array(
-				'type' => 'check',
+				'size' => 30,
+				'eval' => 'trim'
 			),
 		),
-
+		
 	),
 );

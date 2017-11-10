@@ -1,5 +1,5 @@
 <?php
-namespace Unima\Publist4ubma2\Controller;
+namespace UMA\UmaPublist\Controller;
 
 
 /***************************************************************
@@ -28,7 +28,7 @@ namespace Unima\Publist4ubma2\Controller;
  ***************************************************************/
 
 
-use Unima\Publist4ubma2\Utility\xmlUtil;
+use UMA\UmaPublist\Utility\xmlUtil;
 
 /**
  * PublicationController
@@ -38,7 +38,7 @@ class PublicationController extends BasicPublistController {
 	/**
 	 * publicationRepository
 	 *
-	 * @var \Unima\Publist4ubma2\Domain\Repository\PublicationRepository
+	 * @var \UMA\UmaPublist\Domain\Repository\PublicationRepository
 	 * @inject
 	 */
 	protected $publicationRepository = NULL;
@@ -119,7 +119,7 @@ class PublicationController extends BasicPublistController {
 		if ($eprintIdIsInDB === NULL) {
 			// add to DB
 			$this->debugger->add('== Publication ' . $publication['eprintid'] . ' is NOT in DB, add it ==');
-			$pub = $this->objectManager->get('Unima\Publist4ubma2\Domain\Model\Publication');
+			$pub = $this->objectManager->get('UMA\UmaPublist\Domain\Model\Publication');
 			$pub->setEprintId(intval($publication['eprintid']));
 			$newPub = $this->writeProperties($pub, $publication);
 			$this->publicationRepository->add($newPub);

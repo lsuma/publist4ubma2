@@ -1,5 +1,5 @@
 <?php
-namespace Unima\Publist4ubma2\Domain\Repository;
+namespace UMA\UmaPublist\Domain\Repository;
 
 /**
  * The repository for Contents

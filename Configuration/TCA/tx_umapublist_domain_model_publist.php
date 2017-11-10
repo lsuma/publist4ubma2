@@ -1,8 +1,8 @@
 <?php
 return array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_institute',
-		'label' => 'id',
+		'title'	=> 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publist',
+		'label' => 'ce_id',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -19,14 +19,14 @@ return array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'id,name_en,name_de,',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('publist4ubma2') . 'Resources/Public/Icons/tx_publist4ubma2_domain_model_institute.gif'
+		'searchFields' => 'ce_id,query_url,publications,flexform_md5,exclude_external,',
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('uma_publist') . 'Resources/Public/Icons/tx_umapublist_domain_model_publist.gif'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, id, name_en, name_de',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, ce_id, query_url, publications, flexform_md5,exclude_external',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, id, name_en, name_de, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, ce_id, query_url, publications, flexform_md5, exclude_external, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -55,8 +55,8 @@ return array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_publist4ubma2_domain_model_institute',
-				'foreign_table_where' => 'AND tx_publist4ubma2_domain_model_institute.pid=###CURRENT_PID### AND tx_publist4ubma2_domain_model_institute.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_umapublist_domain_model_publication',
+				'foreign_table_where' => 'AND tx_umapublist_domain_model_publication.pid=###CURRENT_PID### AND tx_umapublist_domain_model_publication.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -113,33 +113,52 @@ return array(
 				),
 			),
 		),
-
-		'id' => array(
+		'ce_id' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_institute.id',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publist.ceid',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
 				'eval' => 'int'
 			)
 		),
-		'name_en' => array(
+
+		'query_url' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_institute.name_en',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publist.query_url',
 			'config' => array(
-				'type' => 'input',
-				'size' => 30,
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
 				'eval' => 'trim'
 			),
 		),
-		'name_de' => array(
+		'publications' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_institute.name_de',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publist.publications',
+                        'config' => array(
+                                'type' => 'text',
+                                'cols' => 40,
+                                'rows' => 15,
+                                'eval' => 'trim'
+                        ),
+		),
+		'flexform_md5' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publist.ffmd5',
 			'config' => array(
 				'type' => 'input',
-				'size' => 30,
-				'eval' => 'trim'
+				'size' => 4,
+				'eval' => 'int'
+			)
+		),
+		'exclude_external' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publist.exclude_external',
+			'config' => array(
+				'type' => 'check',
 			),
-		),		
+		),
+
 	),
 );

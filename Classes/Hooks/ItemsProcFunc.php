@@ -1,6 +1,6 @@
 <?php
 
-namespace Unima\Publist4ubma2\Hooks;
+namespace UMA\UmaPublist\Hooks;
 
 	/**
  * This file is part of the TYPO3 CMS project.
@@ -20,7 +20,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  * Userfunc to render select-boxes for institutes and chairs from db
  *
  * @package TYPO3
- * @subpackage tx_publist4ubma2
+ * @subpackage tx_umapublist
  */
 class ItemsProcFunc {
 
@@ -33,7 +33,7 @@ class ItemsProcFunc {
          */
         public function user_templateLayout(array &$config) {
                 /** @var \GeorgRinger\News\Utility\TemplateLayout $templateLayoutsUtility */
-                $templateLayoutsUtility = GeneralUtility::makeInstance('Unima\\Publist4ubma2\\Utility\\TemplateLayout');
+                $templateLayoutsUtility = GeneralUtility::makeInstance('UMA\\UmaPublist\\Utility\\TemplateLayout');
                 $templateLayouts = $templateLayoutsUtility->getAvailableTemplateLayouts($config['row']['pid']);
                 foreach ($templateLayouts as $layout) {
                         $additionalLayout = array(
@@ -59,7 +59,7 @@ class ItemsProcFunc {
 
 		// get the institute repository
 		$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
-		$repository = $objectManager->get('Unima\\Publist4ubma2\\Domain\\Repository\\InstituteRepository');
+		$repository = $objectManager->get('UMA\\UmaPublist\\Domain\\Repository\\InstituteRepository');
 
 		$result = $repository->findAll();
 
@@ -87,9 +87,9 @@ class ItemsProcFunc {
 
 		// get the institute repository
 		$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
-		$repository = $objectManager->get('Unima\\Publist4ubma2\\Domain\\Repository\\ChairRepository');
+		$repository = $objectManager->get('UMA\\UmaPublist\\Domain\\Repository\\ChairRepository');
 		$configurationManager = $objectManager->get('TYPO3\\CMS\\Extbase\\Configuration\\ConfigurationManagerInterface');
-		$typoscript = $configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'publist4ubma2');
+		$typoscript = $configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'uma_publist');
 		//\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($typoscript);
 		$result = $repository->findAllByInst($config['config']['my_inst'], $typoscript['storagePid']);
 

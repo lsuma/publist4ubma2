@@ -1,5 +1,5 @@
 <?php
-namespace Unima\Publist4ubma2\Controller;
+namespace UMA\UmaPublist\Controller;
 
 
 /***************************************************************
@@ -27,9 +27,9 @@ namespace Unima\Publist4ubma2\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-use Unima\Publist4ubma2\Utility\queryUrl;
-use Unima\Publist4ubma2\Utility\fileReader;
-use Unima\Publist4ubma2\Utility\xmlUtil;
+use UMA\UmaPublist\Utility\queryUrl;
+use UMA\UmaPublist\Utility\fileReader;
+use UMA\UmaPublist\Utility\xmlUtil;
 
 /**
  * PublistController
@@ -40,7 +40,7 @@ class PublistController extends BasicPublistController {
 	/**
 	 * publistRepository
 	 *
-	 * @var \Unima\Publist4ubma2\Domain\Repository\PublistRepository
+	 * @var \UMA\UmaPublist\Domain\Repository\PublistRepository
 	 * @inject
 	 */
 	protected $publistRepository = NULL;
@@ -49,7 +49,7 @@ class PublistController extends BasicPublistController {
 	/**
 	 * publicationController
 	 *
-	 * @var \Unima\Publist4ubma2\Controller\PublicationController
+	 * @var \UMA\UmaPublist\Controller\PublicationController
 	 * @inject
 	 */
 	protected $publicationController = NULL;
@@ -70,8 +70,8 @@ class PublistController extends BasicPublistController {
 	 */
 	public function listAction() {
 
-		//$debugger = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Unima\\Publist4ubma2\\Service\\DebugCollector');
-		$GLOBALS['TSFE']->additionalFooterData['tx_'.$this->request->getControllerExtensionKey()] = '<script type="text/javascript" src="' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/publist4ubma2.js"></script>';
+		//$debugger = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('UMA\\UmaPublist\\Service\\DebugCollector');
+		$GLOBALS['TSFE']->additionalFooterData['tx_'.$this->request->getControllerExtensionKey()] = '<script type="text/javascript" src="' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath($this->request->getControllerExtensionKey()) . 'Resources/Public/JavaScript/uma_publist.js"></script>';
 		$this->debugger->add('Started PublistController listAction');
 
 		// check, if ContentElement is already in DB
@@ -216,7 +216,7 @@ class PublistController extends BasicPublistController {
 		if ($publist === NULL) {
 			// add to DB
 			$this->debugger->add('== Publist ' . $cElementId . ' is NOT in DB, add it ==');
-			$publist = $this->objectManager->get('Unima\Publist4ubma2\Domain\Model\Publist');
+			$publist = $this->objectManager->get('UMA\UmaPublist\Domain\Model\Publist');
 			$publist->setCeId($cElementId);
 			$publist->setQueryUrl($url);
 			$publist->setExcludeExternal($this->settings['excludeexternal']);
@@ -264,7 +264,7 @@ class PublistController extends BasicPublistController {
 
 	private function extractPublicationsFromXML($data, $excludeExternal)
 	{
-		//$debugger = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('Unima\\Publist4ubma2\\Service\\DebugCollector');
+		//$debugger = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('UMA\\UmaPublist\\Service\\DebugCollector');
 		$publications = [];
 
 		$xml = \simplexml_load_string($data);

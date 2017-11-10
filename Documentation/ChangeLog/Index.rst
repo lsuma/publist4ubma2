@@ -48,7 +48,7 @@ ChangeLog
 0.0.4 -> 0.0.5
 --------------
 2016-11-17
-  - BUGFIX: in "Unima\Publist4ubma2\Controller\PublicationController::decodeAuthors():"
+  - BUGFIX: in "UMA\UmaPublist\Controller\PublicationController::decodeAuthors():"
     - had to remove [$index] from variable
   - BUGFIX: in "Classes/ViewHelpers/RenderNamesWithAndRdfaSchemaViewHelper.php"
     - wrong usage of strpos

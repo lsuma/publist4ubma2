@@ -1,14 +1,14 @@
 <html data-namespace-typo3-fluid="true"
-        xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-        xmlns:n="https://typo3.org/ns/Unima/Publist4ubma2/ViewHelpers">
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        xmlns:n="http://typo3.org/ns/UMA/UmaPublist/ViewHelpers">
 
 <f:comment>
 <f:if condition="{settings.enumerate}==0">
 	<f:then>
-		<ul class="tx_publist4ubma-ol">
+		<ul class="uma-publist-ol">
 	</f:then>
 	<f:else>
-		<ol start="{m:indexOffset(settings: '{settings}', content: '{content}', years: '{years}', types: '{types}', curYear: '{thisYear}', curType: '{thisType}')}}" class="tx_publist4ubma-ol">
+		<ol start="{n:indexOffset(settings: '{settings}', content: '{content}', years: '{years}', types: '{types}', curYear: '{thisYear}', curType: '{thisType}')}}" class="uma-publist-ol">
 	</f:else>
 </f:if>
 </f:comment>

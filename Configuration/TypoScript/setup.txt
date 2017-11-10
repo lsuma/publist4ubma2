@@ -1,28 +1,28 @@
 # Module configuration
 
 # for the frontend
-plugin.tx_publist4ubma2_pi1 {
+plugin.tx_umapublist_pi1 {
 	# for own usage (settings)
 	settings {
-		cssFile = {$plugin.tx_publist4ubma2_pi1.settings.cssFile}
-		storagePid = {$plugin.tx_publist4ubma2_pi1.persistence.storagePid}
+		cssFile = {$plugin.tx_umapublist_pi1.settings.cssFile}
+		storagePid = {$plugin.tx_umapublist_pi1.persistence.storagePid}
 	}
 
 	# for Extbase
 	persistence {
-		storagePid = {$plugin.tx_publist4ubma2_pi1.persistence.storagePid}
+		storagePid = {$plugin.tx_umapublist_pi1.persistence.storagePid}
 	}
-
+}
 
 # for the Backend Module
-module.tx_publist4ubma2 {
+module.tx_umapublist {
 	# for own usage (settings)
 	settings {
-		storagePid = {$plugin.tx_publist4ubma2_pi1.persistence.storagePid}
+		storagePid = {$plugin.tx_umapublist_pi1.persistence.storagePid}
 	}
 
 	# for Extbase
-	persistence < plugin.tx_publist4ubma2_pi1.persistence
+	persistence < plugin.tx_umapublist_pi1.persistence
 }
 
 
@@ -33,7 +33,7 @@ config.tx_extbase {
         enableAutomaticCacheClearing = 1
         updateReferenceIndex = 0
         classes {
-            Unima\Publist4ubma2\Domain\Model\Content {
+            UMA\UmaPublist\Domain\Model\Content {
                 mapping {
                     tableName = tt_content
                     columns {

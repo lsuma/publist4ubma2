@@ -1,7 +1,7 @@
 #
-# Table structure for table 'tx_publist4ubma2_domain_model_institute'
+# Table structure for table 'tx_umapublist_domain_model_institute'
 #
-CREATE TABLE tx_publist4ubma2_domain_model_institute (
+CREATE TABLE tx_umapublist_domain_model_institute (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -40,9 +40,9 @@ CREATE TABLE tx_publist4ubma2_domain_model_institute (
 );
 
 #
-# Table structure for table 'tx_publist4ubma2_domain_model_chair'
+# Table structure for table 'tx_umapublist_domain_model_chair'
 #
-CREATE TABLE tx_publist4ubma2_domain_model_chair (
+CREATE TABLE tx_umapublist_domain_model_chair (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -83,9 +83,9 @@ CREATE TABLE tx_publist4ubma2_domain_model_chair (
 
 
 #
-# Table structure for table 'tx_publist4ubma2_domain_model_publist'
+# Table structure for table 'tx_umapublist_domain_model_publist'
 #
-CREATE TABLE tx_publist4ubma2_domain_model_publist (
+CREATE TABLE tx_umapublist_domain_model_publist (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -127,9 +127,9 @@ CREATE TABLE tx_publist4ubma2_domain_model_publist (
 
 
 #
-# Table structure for table 'tx_publist4ubma2_domain_model_publication'
+# Table structure for table 'tx_umapublist_domain_model_publication'
 #
-CREATE TABLE tx_publist4ubma2_domain_model_publication (
+CREATE TABLE tx_umapublist_domain_model_publication (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,

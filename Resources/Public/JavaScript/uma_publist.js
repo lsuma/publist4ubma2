@@ -5,11 +5,11 @@ $.expr[":"].contains = $.expr.createPseudo(function(arg) {
 });
 
 $(document).ready(function() {
-	var updatePublist4Ubma2 = function(content, searchWord) {
+	var updateUmaPublist = function(content, searchWord) {
 		searchWord = searchWord.replace(/'/, '');
 		$(this).find('li').addClass('hidden').filter(":contains('" + searchWord + "')").removeClass('hidden');
 	};
-	$('.publist4ubma2-filter').on('keyup', function() {
+	$('.uma-publist-filter').on('keyup', function() {
 		updateFilter($('#' + $(this).attr('data-publist-content')), $(this).val());
 	});
 });

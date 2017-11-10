@@ -1,24 +1,24 @@
 <html data-namespace-typo3-fluid="true"
-        xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-        xmlns:n="https://typo3.org/ns/Unima/Publist4ubma2/ViewHelpers">
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        xmlns:n="http://typo3.org/ns/UMA/UmaPublist/ViewHelpers">
 
 <f:layout name="General" />
 
 <f:section name="content">
 <f:comment>
-	<n:includeFile path="EXT:publist4ubma2/Resources/Public/CSS/publist.css" />
+	<n:includeFile path="EXT:uma_publist/Resources/Public/CSS/publist.css" />
 </f:comment>
 
 	<f:if condition="{errorMsg}">
 		<f:then>
-			<div class="publist4ubma2_error">
+			<div class="uma-publist-error">
 				"{errorMsg}"1
 			</div>
 		</f:then>
 	</f:if>
 	<f:if condition="{infoMsg}">
 		<f:then>
-			<div class="publist4ubma2_info">
+			<div class="uma-publist-info">
 				"{infoMsg}"2
 			</div>
 		</f:then>
@@ -113,7 +113,7 @@
 
 			<f:if condition="{settings.bibtex}==1">
 				<f:then>
-					<div class="tx_publist4ubma2-right"><a href="{bibtexturl}" target="_blank">[BibTex]</a></div>
+					<div class="uma-publist-right"><a href="{bibtexturl}" target="_blank">[BibTex]</a></div>
 				</f:then>
 			</f:if>
 		</f:then>
@@ -121,7 +121,7 @@
 
 	<f:if condition="{debugMsg}">
 		<f:then>
-			<div class="publist4ubma2_debug">
+			<div class="uma-publist-debug">
 				<ul>
 					<f:for each="{debugMsg}" as="line">
 						<li>Debug: {line}</li>

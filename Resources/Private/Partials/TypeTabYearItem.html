@@ -1,11 +1,11 @@
 <html data-namespace-typo3-fluid="true"
-        xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-        xmlns:n="https://typo3.org/ns/Unima/Publist4ubma2/ViewHelpers">
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        xmlns:n="http://typo3.org/ns/UMA/UmaPublist/ViewHelpers">
 
 <f:switch expression="{settings.splittypes}">
 	<f:case value="0">
 		<f:for each="{years}" as="year">
-			<div class="tx_publist4ubma2-yearheader">
+			<div class="uma-publist-yearheader">
 			<h4>{year}</h4>
 			</div>
 			<f:render partial="PrintPublications" arguments="{settings: '{settings}', content: '{content}', years: '{years}', types: '{types}', thisYear: '{year}'}" />
@@ -14,12 +14,12 @@
 
 	<f:case value="1">
 		<f:for each="{years}" as="year">
-			<div class="tx_publist4ubma2-yearheader">
+			<div class="uma-publist-yearheader">
 			<h4>{year}</h4>
 			</div>
 
 			<f:for each="{m:bibTypesThisYear(publications: '{content}', thisYear: '{year}', types: '{types}')}" as="type">
-				<div class="tx_publist4ubma2-typeheader">
+				<div class="uma-publist-typeheader">
 				<h4><f:translate key='{type}' /></h4>
 				</div>
 				<f:render partial="PrintPublications" arguments="{settings: '{settings}', content: '{content}', years: '{years}', types: '{types}', thisYear: '{year}', thisType: '{type}'}" />
@@ -29,7 +29,7 @@
 
 	<f:case value="2">
 		<f:for each="{m:yearsThisBibType(publications: '{content}', thisType: '{curType}', years: '{years}')}" as="year">
-			<div class="tx_publist4ubma2-yearheader">
+			<div class="uma-publist-yearheader">
 			<h4>{year}</h4>
 			</div>
 			<f:render partial="PrintPublications" arguments="{settings: '{settings}', content: '{content}', years: '{years}', types: '{types}', thisYear: '{year}', thisType: '{curType}'}" />

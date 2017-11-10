@@ -1,11 +1,11 @@
-plugin.tx_publist4ubma2_pi1 {
+plugin.tx_umapublist_pi1 {
 	settings {
-		# cat=tx_publist4ubma2; type=string; label=cssFile
-		cssFile = EXT:publist4ubma2/Resources/Public/CSS/publist.css
+		# cat=tx_umapublist; type=string; label=cssFile
+		cssFile = EXT:uma_publist/Resources/Public/CSS/publist.css
 	}
 
 	persistence {
-		# cat=tx_publist4ubma2; type=int; label=storagePid
+		# cat=tx_umapublist; type=int; label=storagePid
 		storagePid = 0
 	}
 }

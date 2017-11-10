@@ -1,12 +1,14 @@
 <html data-namespace-typo3-fluid="true"
-        xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-        xmlns:n="https://typo3.org/ns/Unima/Publist4ubma2/ViewHelpers">
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        xmlns:n="http://typo3.org/ns/UMA/UmaPublist/ViewHelpers">
+
+{namespace n=UMA\UmaPublist\ViewHelpers}
 
 <f:if condition="{settings.cssFile}">
-	<cssfile:includeFile path="{settings.cssFile}" />
+	<n:includeFile path="{settings.cssFile}" />
 </f:if>
 
 
-<div class="tx_publist4ubma2">
+<div class="uma-publist">
 	<f:render section="content" />
 </div>

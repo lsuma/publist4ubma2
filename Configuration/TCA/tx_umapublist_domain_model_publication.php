@@ -1,7 +1,7 @@
 <?php
 return array(
 	'ctrl' => array(
-		'title'	=> 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication',
+		'title'	=> 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication',
 		'label' => 'eprint_id',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -20,7 +20,7 @@ return array(
 			'endtime' => 'endtime',
 		),
 		'searchFields' => 'eprint_id,title,abstract,url_offical,url_ubma_extern,used_link_url,url,year,bib_type,volume,publisher,rev_number,publication,editors,creators,corp_creators,ubma_book_editor,event_location,place_of_pub,page_range,issn,isbn,ubma_tags,ubma_edition,book_title,used_coin,',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('publist4ubma2') . 'Resources/Public/Icons/tx_publist4ubma2_domain_model_publication.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('uma_publist') . 'Resources/Public/Icons/tx_umapublist_domain_model_publication.gif'
 	),
 	'interface' => array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, eprint_id, title, abstract, url_offical, url_ubma_extern, used_link_url, url, year, bib_type, volume, publisher, rev_number, publication, editors, creators, corp_creators, ubma_book_editor, event_location, place_of_pub, page_range, issn, isbn, ubma_tags, ubma_edition, book_title, used_coin',
@@ -55,8 +55,8 @@ return array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_publist4ubma2_domain_model_publication',
-				'foreign_table_where' => 'AND tx_publist4ubma2_domain_model_publication.pid=###CURRENT_PID### AND tx_publist4ubma2_domain_model_publication.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_umapublist_domain_model_publication',
+				'foreign_table_where' => 'AND tx_umapublist_domain_model_publication.pid=###CURRENT_PID### AND tx_umapublist_domain_model_publication.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -116,7 +116,7 @@ return array(
 
 		'eprint_id' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.eprint_id',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.eprint_id',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
@@ -125,7 +125,7 @@ return array(
 		),
 		'title' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.title',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.title',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -134,7 +134,7 @@ return array(
 		),
 		'book_title' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.bookTitle',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.bookTitle',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -144,7 +144,7 @@ return array(
 
 		'abstract' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.abstract',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.abstract',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -154,7 +154,7 @@ return array(
 		),
 		'url_offical' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.url_offical',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.url_offical',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -163,7 +163,7 @@ return array(
 		),
 		'url_ubma_extern' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.url_ubma_extern',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.url_ubma_extern',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -172,7 +172,7 @@ return array(
 		),
 		'used_link_url' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.usedLinkUrl',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.usedLinkUrl',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -181,7 +181,7 @@ return array(
 		),
 		'url' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.url',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.url',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -190,7 +190,7 @@ return array(
 		),
 		'year' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.year',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.year',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
@@ -199,7 +199,7 @@ return array(
 		),
 		'bib_type' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.bib_type',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.bib_type',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -208,7 +208,7 @@ return array(
 		),
 		'volume' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.volume',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.volume',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -217,7 +217,7 @@ return array(
 		),
 		'publisher' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.publisher',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.publisher',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -226,7 +226,7 @@ return array(
 		),
 		'rev_number' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.rev_number',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.rev_number',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -235,7 +235,7 @@ return array(
 		),
 		'publication' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.publication',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.publication',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -244,7 +244,7 @@ return array(
 		),
 		'editors' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.editors',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.editors',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -253,7 +253,7 @@ return array(
 		),
 		'creators' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.creators',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.creators',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -262,7 +262,7 @@ return array(
 		),
 		'corp_creators' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.corpCreators',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.corpCreators',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -272,7 +272,7 @@ return array(
 
 		'ubma_book_editor' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.ubma_book_editor',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.ubma_book_editor',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -281,7 +281,7 @@ return array(
 		),
 		'event_location' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.eventLocation',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.eventLocation',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -290,7 +290,7 @@ return array(
 		),
 		'place_of_pub' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.placeOfPub',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.placeOfPub',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -299,7 +299,7 @@ return array(
 		),
 		'page_range' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.pageRange',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.pageRange',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -308,7 +308,7 @@ return array(
 		),
 		'issn' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.issn',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.issn',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -317,7 +317,7 @@ return array(
 		),
 		'isbn' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.isbn',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.isbn',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -326,7 +326,7 @@ return array(
 		),
 		'ubma_tags' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.ubmaTags',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.ubmaTags',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -335,7 +335,7 @@ return array(
 		),
 		'ubma_edition' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.ubmaEdition',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.ubmaEdition',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -344,7 +344,7 @@ return array(
 		),
 		'used_coin' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:publist4ubma2/Resources/Private/Language/locallang_db.xlf:tx_publist4ubma2_domain_model_publication.usedCoin',
+			'label' => 'LLL:EXT:uma_publist/Resources/Private/Language/locallang_db.xlf:tx_umapublist_domain_model_publication.usedCoin',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,

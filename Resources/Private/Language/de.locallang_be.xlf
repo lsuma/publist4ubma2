@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-06-02T13:40:33Z" product-name="publist4ubma2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-06-02T13:40:33Z" product-name="uma_publist">
 		<header/>
 		<body>
 			<trans-unit id="pi1_title" xml:space="preserve">
@@ -16,8 +16,8 @@
 				<target>Präfix für eprintid-URL</target>
 			</trans-unit>
 			<trans-unit id="mlang_labels_tablabel" xml:space="preserve">
-				<source>publist4ubma2 module</source>
-				<target>publist4ubma2 module</target>
+				<source>uma_publist module</source>
+				<target>uma_publist Modul</target>
 			</trans-unit>
 			<trans-unit id="module.syncChairs" xml:space="preserve">
 				<source>Sync Chairs</source>
@@ -36,15 +36,15 @@
 				<target>Publikationslisten synchronisieren und Probleme beheben</target>
 			</trans-unit>
 			<trans-unit id="mlang_labels_tabdescr" xml:space="preserve">
-				<source>Dashboard for publist4ubma2 related tasks</source>
-				<target>Dashboard für publist4ubma2-bezogene Aufgaben</target>
+				<source>Dashboard for uma_publist related tasks</source>
+				<target>Dashboard für uma_publist-bezogene Aufgaben</target>
 			</trans-unit>
 			<trans-unit id="mlang_tabs_tab" xml:space="preserve">
-				<source>Publist4ubma2</source>
-				<target>Publist4ubma2</target>
+				<source>uma_publist</source>
+				<target>uma_publist</target>
 			</trans-unit>
 			<trans-unit id="list.header" xml:space="preserve">
-				<source>Sync Institutes and Chairs for plugin publist4ubma2</source>
+				<source>Sync Institutes and Chairs for plugin uma_publist</source>
 				<target>Institute und Lehrstühle synchronisieren</target>
 			</trans-unit>
 			<trans-unit id="list.description" xml:space="preserve">
@@ -104,8 +104,8 @@
 				<target>Sie synchronisieren von: </target>
 			</trans-unit>
 			<trans-unit id="list.syncFromChange" xml:space="preserve">
-				<source> - Change this in the Extensionmanager under publist4ubma2.</source>
-				<target> - Bitte im Erweiterungsmanager ändern unter publit4ubma2</target>
+				<source> - Change this in the Extensionmanager under uma_publist</source>
+				<target> - Bitte im Erweiterungsmanager ändern unter uma_publist</target>
 			</trans-unit>
 			<trans-unit id="listpublist.header" xml:space="preserve">
 				<source>Refresh Publication Lists</source>

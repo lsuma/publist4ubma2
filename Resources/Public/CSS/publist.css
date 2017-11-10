@@ -1,45 +1,42 @@
-.publist4ubma2_error {
+.uma-publist-error {
  	background-color:#FACC2E;
 }
 
-
-.publist4ubma2_info {
+.uma-publist-info {
  	background-color:#A9F5F2;
 }
 
-
-.publist4ubma2_debug {
+.uma-publist-debug {
 	background-color:#F2F2F2;
 }
 
-
-.tx_publist4ubma2-yearnavi { 
+.uma-publist-yearnavi { 
  	background-color: #c9dbd8; 
 	text-align: center;
 	padding: 0.7em;
 }
 
-.tx_publist4ubma2-typenavi { 
+.uma-publist-typenavi { 
  	background-color: #cccccc; 
 	text-align: center;
 	padding: 0.7em;
 }
 
-.tx_publist4ubma2-yearheader { 
+.uma-publist-yearheader { 
  	background-color: #c9dbd8; 
 	text-align: left;
 	padding: 0.7em;
  	font-weight: bold; 
 }
 
-.tx_publist4ubma2-typeheader { 
+.uma-publist-typeheader { 
  	background-color: #cccccc; 
 	text-align: left;
 	padding: 0.7em;
  	font-weight: bold; 
 }
 
-.tx_publist4ubma2-typeheader h4 { 
+.uma-publist-typeheader h4 { 
 	margin: 0px;
 	padding: 0px;
 }
@@ -62,34 +59,34 @@
 	counter-increment: indexCounter;
 }
 
-.tx_publist4ubma2-right {
+.uma-publist-right {
 	text-align: right;
 }
 
 .myenumlist li:before { content:counter(indexCounter) ". ";}
 
 
-.tx_publist4ubma2 .tabs {
+.uma-publist .tabs {
 	border: 0;
 	margin-bottom:-20px;
 }
 
-.tx_publist4ubma2 .tabs li {
+.uma-publist .tabs li {
 	list-style:none !important;
 	margin:0 0 20px 0 !important;
 	background:transparent;
 	/*float:left;*/
 }
 
-.tx_publist4ubma2 .tabs li::before {
+.uma-publist .tabs li::before {
 	display:none !important;
 }
 
-.tx_publist4ubma2 div.tabs-content>div>ul {
+.uma-publist div.tabs-content>div>ul {
 	margin:0 !important;
 }
 
-.tx_publist4ubma2 .tabs li a {
+.uma-publist .tabs li a {
 	background:#d1d7df;
 	padding:.3125rem .625rem;
 	font-size:1rem;
@@ -98,23 +95,23 @@
 	line-height:1.8;
 }
 
-.tx_publist4ubma2 .tabs li:first-child a {
+.uma-publist .tabs li:first-child a {
 	border-radius:.625rem 0 0 .625rem;
 	-webkit-border-radius:.625rem 0 0 .625rem;
 }
 
-.tx_publist4ubma2 .tabs li:last-child a {
+.uma-publist .tabs li:last-child a {
 	border-radius:0 .625rem .625rem 0;
 	-webkit-border-radius:0 .625rem .625rem 0;
 }
 
-.tx_publist4ubma2 .tabs li.is-active a {
+.uma-publist .tabs li.is-active a {
 	background:#232e58;
 	color:#fff;
 	position:relative;
 }
 
-/*.tx_publist4ubma2 .tabs li a::after {
+/*.uma-publist .tabs li a::after {
 	content:' ';
 	display:block;
 	height:0;
@@ -130,17 +127,17 @@
 	transition:0.4s all;
 }*/
 
-.tx_publist4ubma2 .tabs li.is-active a::after {
+.uma-publist .tabs li.is-active a::after {
 	opacity:1;
 	bottom:-14px;
 }
 
-.tx_publist4ubma2 div.tabs-content {
+.uma-publist div.tabs-content {
 	border:1px solid #f5f6f9;
 	clear:both;
 }
 
-.tx_publist4ubma2 h4 {
+.uma-publist h4 {
 	font-weight:normal;
 	padding:0.5rem 1.5rem;
 	border-bottom:3px solid #dbe6cd;
