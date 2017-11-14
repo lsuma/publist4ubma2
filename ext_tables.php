@@ -12,7 +12,7 @@ if (TYPO3_MODE === 'BE') {
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
 		'UMA.uma_publist',
 		'tools',	 // Make module a submodule of 'Admin tools'
-		'publist4ubma_m1',	// Submodule key
+		'mod1',	// Submodule key
 		'',						// Position
 		array(
 		/** only the first matching Controller is run
