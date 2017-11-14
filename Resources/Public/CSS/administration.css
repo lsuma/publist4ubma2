@@ -67,3 +67,7 @@
 .uma-publist-be .hide, .uma-publist-be .hide-line {
   opacity: 0.5;
 }
+
+#tools-UmaPublistMod1 td {
+  padding-right: 20px;
+}
