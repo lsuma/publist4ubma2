@@ -12,11 +12,11 @@
 				<target>Institut</target>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_institute.name_en">
-				<source>Name En</source>
+				<source>Name English</source>
 				<target>Namen englisch</target>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_institute.name_de">
-				<source>Name De</source>
+				<source>Name German</source>
 				<target>Name deutsch</target>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_institute.id">
@@ -36,11 +36,11 @@
 				<target>Elternelement</target>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_chair.name_en">
-				<source>Name En</source>
+				<source>Name English</source>
 				<target>Name englisch</target>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_chair.name_de">
-				<source>Name De</source>
+				<source>Name German</source>
 				<target>Name deutsch</target>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_publication">
@@ -60,7 +60,7 @@
 				<target>Abstract</target>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_publication.url_offical">
-				<source>URL Official</source>
+				<source>Official URL</source>
 				<target>Offizielle URL</target>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_publication.url_ubma_extern">
@@ -88,7 +88,7 @@
 				<target>Herausgeber</target>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_publication.rev_number">
-				<source>Rev Number</source>
+				<source>Rev. Number</source>
 				<target>Auflage</target>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_publication.publication">

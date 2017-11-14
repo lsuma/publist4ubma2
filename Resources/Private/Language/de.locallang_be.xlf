@@ -16,15 +16,15 @@
 				<target>Präfix für eprintid-URL</target>
 			</trans-unit>
 			<trans-unit id="mlang_labels_tablabel" xml:space="preserve">
-				<source>uma_publist module</source>
-				<target>uma_publist Modul</target>
+				<source>Publication list module</source>
+				<target>Publikationslisten-Modul</target>
 			</trans-unit>
 			<trans-unit id="module.syncChairs" xml:space="preserve">
-				<source>Sync Chairs</source>
+				<source>Synchronize chairs</source>
 				<target>Lehrstühle synchronisieren</target>
 			</trans-unit>
 			<trans-unit id="module.publicationLists" xml:space="preserve">
-				<source>Publication Lists</source>
+				<source>Publication lists</source>
 				<target>Publikationslisten</target>
 			</trans-unit>
 			<trans-unit id="module.publications" xml:space="preserve">
@@ -32,7 +32,7 @@
 				<target>Publikationen in TYPO3-Datenbank</target>
 			</trans-unit>
 			<trans-unit id="module.showCleanup" xml:space="preserve">
-				<source>Sync Publication Lists and Cleanup</source>
+				<source>Synchronize publication lists and clean up DB</source>
 				<target>Publikationslisten synchronisieren und Probleme beheben</target>
 			</trans-unit>
 			<trans-unit id="mlang_labels_tabdescr" xml:space="preserve">
@@ -40,8 +40,8 @@
 				<target>Dashboard für uma_publist-bezogene Aufgaben</target>
 			</trans-unit>
 			<trans-unit id="mlang_tabs_tab" xml:space="preserve">
-				<source>uma_publist</source>
-				<target>uma_publist</target>
+				<source>Publications</source>
+				<target>Publikationen</target>
 			</trans-unit>
 			<trans-unit id="list.header" xml:space="preserve">
 				<source>Sync Institutes and Chairs for plugin uma_publist</source>
@@ -52,31 +52,31 @@
 				<target>Hier können Sie Institute und Lehrstühle synchronisieren</target>
 			</trans-unit>
 			<trans-unit id="list.noinstitutesfound" xml:space="preserve">
-				<source>No Institutes found</source>
+				<source>No institutes found</source>
 				<target>Keine Institute gefunden</target>
 			</trans-unit>
 			<trans-unit id="list.nochairsfound" xml:space="preserve">
-				<source>No Chairs found</source>
+				<source>No chairs found</source>
 				<target>Keine Lehrstühle gefunden</target>
 			</trans-unit>
 			<trans-unit id="list.nopublicationsfound" xml:space="preserve">
-				<source>No Publications found</source>
+				<source>No publications found</source>
 				<target>Keine Publikationen gefunden</target>
 			</trans-unit>
 			<trans-unit id="showcleanup.header" xml:space="preserve">
-				<source>Cleanup DB and sync Publication lists</source>
+				<source>Clean up DB and synchronize publication lists</source>
 				<target>Datenbankprobleme beheben und Publikationslisten synchronisieren</target>
 			</trans-unit>
 			<trans-unit id="showcleanup.description" xml:space="preserve">
-				<source>These tasks are also available in task scheduler. If they take to long, please run them from the typo3 task scheduler. Anyway, it is a good idea, to configure the scheduler to run these tasks every night.</source>
-				<target>Diese Aufgaben sind auch im Planer verfügbar. Falls sie zu lange laufen, starten Sie sie bitte aus dem TYPO3-Planer. In jedem Fall ist es eine gute Idee, den Planer so zu konfigurieren, dass diese Aufgaben mindestens einmal pro Nacht ausgefüht werden.</target>
+				<source>These tasks are also available in the TYPO3 Scheduler. If they take too long, please run them from there. It is advisable to configure the scheduler to run these tasks once every night.</source>
+				<target>Diese Aufgaben sind auch im TYPO3-Planer verfügbar. Falls sie zu lange benötigen, starten Sie sie bitte von dort aus. Es ist ratsam, den Planer so zu konfigurieren, dass diese Aufgaben einmal pro Nacht ausgeführt werden.</target>
 			</trans-unit>
 			<trans-unit id="publist.sync" xml:space="preserve">
-				<source>Sync all publications with library</source>
+				<source>Synchronize all publications with library</source>
 				<target>Alle Publikationen mit Bibliothek synchronisieren</target>
 			</trans-unit>
 			<trans-unit id="publist.cleanup" xml:space="preserve">
-				<source>Drop publicationlists from DB which are no longer necessary (content-element was deleted)</source>
+				<source>Drop publication lists from DB which are no longer necessary (content-element was deleted)</source>
 				<target>Nicht mehr benötigte Publikationslisten aus Datenbank löschen (Inhaltselement wurde entfernt)</target>
 			</trans-unit>
 			<trans-unit id="publication.cleanup" xml:space="preserve">
@@ -88,27 +88,27 @@
 				<target>Publikationen mit Status "Entfernen" aus Datenbank löschen</target>
 			</trans-unit>
 			<trans-unit id="list.formheadline" xml:space="preserve">
-				<source>Sync Institutes and Chairs</source>
+				<source>Synchronize institutes and chairs</source>
 				<target>Institute und Lehrstühle synchronisieren</target>
 			</trans-unit>
 			<trans-unit id="list.refresh" xml:space="preserve">
-				<source>Just Refresh from DB: </source>
+				<source>Just refresh from DB: </source>
 				<target>Nur aus Datenbank aktualisieren: </target>
 			</trans-unit>
 			<trans-unit id="list.sync" xml:space="preserve">
-				<source>Sync all from Remote: </source>
+				<source>Synchronize all from remote: </source>
 				<target>Alles aus entfernter Quelle synchronisieren: </target>
 			</trans-unit>
 			<trans-unit id="list.syncFrom" xml:space="preserve">
-				<source>You are syncing from: </source>
+				<source>You are synchronizing from: </source>
 				<target>Sie synchronisieren von: </target>
 			</trans-unit>
 			<trans-unit id="list.syncFromChange" xml:space="preserve">
-				<source> - Change this in the Extensionmanager under uma_publist</source>
+				<source> - Change this in the Extension Manager under uma_publist</source>
 				<target> - Bitte im Erweiterungsmanager ändern unter uma_publist</target>
 			</trans-unit>
 			<trans-unit id="listpublist.header" xml:space="preserve">
-				<source>Refresh Publication Lists</source>
+				<source>Refresh publication lists</source>
 				<target>Publikationslisten aktualisieren</target>
 			</trans-unit>
 			<trans-unit id="listpublist.description" xml:space="preserve">

@@ -10,10 +10,10 @@
 				<source>Institute</source>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_institute.name_en">
-				<source>Name En</source>
+				<source>Name English</source>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_institute.name_de">
-				<source>Name De</source>
+				<source>Name German</source>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_institute.id">
 				<source>Id</source>
@@ -28,10 +28,10 @@
 				<source>Parent</source>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_chair.name_en">
-				<source>Name En</source>
+				<source>Name English</source>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_chair.name_de">
-				<source>Name De</source>
+				<source>Name German</source>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_publication">
 				<source>Publication</source>
@@ -67,7 +67,7 @@
 				<source>Publisher</source>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_publication.rev_number">
-				<source>Rev Number</source>
+				<source>Rev. Number</source>
 			</trans-unit>
 			<trans-unit id="tx_umapublist_domain_model_publication.publication">
 				<source>Publication</source>
