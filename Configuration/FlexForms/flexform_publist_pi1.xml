@@ -36,6 +36,7 @@
        <label>LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.authorcombi</label>
        <config>
         <type>select</type>
+        <renderType>selectSingle</renderType>
         <items>
          <numIndex index="0">
           <numIndex index="0">LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.authorcombi.or</numIndex>
@@ -88,6 +89,7 @@
        <displayCond>FIELD:settings.searchtags:=:1</displayCond>
        <config>
         <type>select</type>
+        <renderType>selectSingle</renderType>
         <default>0</default>
         <items>
          <numIndex index="0">
@@ -135,6 +137,7 @@
        <displayCond>FIELD:settings.useadvancedtypesbytag:!=:1</displayCond>
        <config>
         <type>select</type>
+        <renderType>selectMultipleSideBySide</renderType>
         <maxitems>20</maxitems>
         <minitems>0</minitems>
         <multiple>0</multiple>
@@ -212,6 +215,7 @@
        <displayCond>FIELD:settings.useadvancedtypesbytag:=:1</displayCond>
        <config>
         <type>select</type>
+        <renderType>selectMultipleSideBySide</renderType>
         <maxitems>20</maxitems>
         <minitems>0</minitems>
         <multiple>0</multiple>
@@ -301,6 +305,7 @@
        <onChange>reload</onChange>
        <config>
         <type>select</type>
+        <renderType>selectSingle</renderType>
         <items>
          <numIndex index="0" type="array">
             <numIndex index="0">LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.years.0</numIndex>
@@ -445,6 +450,7 @@
        <label>LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.icombination</label>
        <config>
         <type>select</type>
+        <renderType>selectSingle</renderType>
         <items>
          <numIndex index="0">
           <numIndex index="0">LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.icombination.or</numIndex>
@@ -474,11 +480,13 @@
        <config>
         <my_inst>10000</my_inst>
         <type>select</type>
+        <renderType>selectMultipleSideBySide</renderType>
+        <enableMultiSelectFilterTextfield>1</enableMultiSelectFilterTextfield>
         <itemsProcFunc>UMA\UmaPublist\Hooks\ItemsProcFunc->renderChairs</itemsProcFunc>
         <items>
         </items>
         <size>10</size>
-        <maxitems>10</maxitems> 
+        <maxitems>20</maxitems> 
        </config>
       </TCEforms>
      </settings.chairs10000>
@@ -498,11 +506,13 @@
        <config>
         <my_inst>20000</my_inst>
         <type>select</type>
+        <renderType>selectMultipleSideBySide</renderType>
+        <enableMultiSelectFilterTextfield>1</enableMultiSelectFilterTextfield>
         <itemsProcFunc>UMA\UmaPublist\Hooks\ItemsProcFunc->renderChairs</itemsProcFunc>
         <items>
         </items>
         <size>10</size>
-        <maxitems>10</maxitems> 
+        <maxitems>20</maxitems> 
        </config>
       </TCEforms>
      </settings.chairs20000>
@@ -522,11 +532,13 @@
        <config>
         <my_inst>30000</my_inst>
         <type>select</type>
+        <renderType>selectMultipleSideBySide</renderType>
+        <enableMultiSelectFilterTextfield>1</enableMultiSelectFilterTextfield>
         <itemsProcFunc>UMA\UmaPublist\Hooks\ItemsProcFunc->renderChairs</itemsProcFunc>
         <items>
         </items>
         <size>10</size>
-        <maxitems>10</maxitems> 
+        <maxitems>20</maxitems> 
        </config>
       </TCEforms>
      </settings.chairs30000>
@@ -546,11 +558,13 @@
        <config>
         <my_inst>40000</my_inst>
         <type>select</type>
+        <renderType>selectMultipleSideBySide</renderType>
+        <enableMultiSelectFilterTextfield>1</enableMultiSelectFilterTextfield>
         <itemsProcFunc>UMA\UmaPublist\Hooks\ItemsProcFunc->renderChairs</itemsProcFunc>
         <items>
         </items>
         <size>10</size>
-        <maxitems>10</maxitems> 
+        <maxitems>20</maxitems> 
        </config>
       </TCEforms>
      </settings.chairs40000>
@@ -570,11 +584,13 @@
        <config>
         <my_inst>50000</my_inst>
         <type>select</type>
+        <renderType>selectMultipleSideBySide</renderType>
+        <enableMultiSelectFilterTextfield>1</enableMultiSelectFilterTextfield>
         <itemsProcFunc>UMA\UmaPublist\Hooks\ItemsProcFunc->renderChairs</itemsProcFunc>
         <items>
         </items>
         <size>10</size>
-        <maxitems>10</maxitems> 
+        <maxitems>20</maxitems> 
        </config>
       </TCEforms>
      </settings.chairs50000>
@@ -594,11 +610,13 @@
        <config>
         <my_inst>60000</my_inst>
         <type>select</type>
+        <renderType>selectMultipleSideBySide</renderType>
+        <enableMultiSelectFilterTextfield>1</enableMultiSelectFilterTextfield>
         <itemsProcFunc>UMA\UmaPublist\Hooks\ItemsProcFunc->renderChairs</itemsProcFunc>
         <items>
         </items>
         <size>10</size>
-        <maxitems>10</maxitems> 
+        <maxitems>20</maxitems> 
        </config>
       </TCEforms>
      </settings.chairs60000>
@@ -618,11 +636,13 @@
        <config>
         <my_inst>70000</my_inst>
         <type>select</type>
+        <renderType>selectMultipleSideBySide</renderType>
+        <enableMultiSelectFilterTextfield>1</enableMultiSelectFilterTextfield>
         <itemsProcFunc>UMA\UmaPublist\Hooks\ItemsProcFunc->renderChairs</itemsProcFunc>
         <items>
         </items>
         <size>10</size>
-        <maxitems>10</maxitems> 
+        <maxitems>20</maxitems> 
        </config>
       </TCEforms>
      </settings.chairs70000>
@@ -642,11 +662,13 @@
        <config>
         <my_inst>80000</my_inst>
         <type>select</type>
+        <renderType>selectMultipleSideBySide</renderType>
+        <enableMultiSelectFilterTextfield>1</enableMultiSelectFilterTextfield>
         <itemsProcFunc>UMA\UmaPublist\Hooks\ItemsProcFunc->renderChairs</itemsProcFunc>
         <items>
         </items>
         <size>10</size>
-        <maxitems>10</maxitems> 
+        <maxitems>20</maxitems> 
        </config>
       </TCEforms>
      </settings.chairs80000>
@@ -669,6 +691,7 @@
        <label>LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.templateLayout</label>
        <config>
         <type>select</type>
+        <renderType>selectSingle</renderType>
         <itemsProcFunc>UMA\UmaPublist\Hooks\ItemsProcFunc->user_templateLayout</itemsProcFunc>
         <items>
          <numIndex index="0" type="array">
@@ -685,6 +708,7 @@
        <label>LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.ordering</label>
        <config>
         <type>select</type>
+        <renderType>selectSingle</renderType>
         <items>
          <numIndex index="0" type="array">
             <numIndex index="0">LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.ordering.0</numIndex>
@@ -708,6 +732,7 @@
        <label>LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.splityears</label>
        <config>
         <type>select</type>
+        <renderType>selectSingle</renderType>
         <items>
          <numIndex index="0" type="array">
             <numIndex index="0">LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.splityears.0</numIndex>
@@ -735,6 +760,7 @@
        <label>LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.splittypes</label>
        <config>
         <type>select</type>
+        <renderType>selectSingle</renderType>
         <items>
          <numIndex index="0" type="array">
             <numIndex index="0">LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.splittypes.0</numIndex>
@@ -766,6 +792,7 @@
        <label>LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.selecturl</label>
        <config>
         <type>select</type>
+        <renderType>selectSingle</renderType>
         <items>
          <numIndex index="0" type="array">
             <numIndex index="0">LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.selecturl.0</numIndex>
