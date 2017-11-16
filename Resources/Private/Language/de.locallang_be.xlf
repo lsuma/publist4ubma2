@@ -185,83 +185,83 @@
 				<target>Aktivierung von zusätzlichen Publikationstypen durch Verwendung von Tags</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type" xml:space="preserve">
-				<source>Type of publication</source>
-				<target>Publikationstyp</target>
+				<source>Publication types</source>
+				<target>Publikationstypen</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.advancedtype" xml:space="preserve">
-				<source>Type of publication (+ custom types)</source>
-				<target>Publikationstyp (+ eigene Typen)</target>
+				<source>Publication types (+ custom types)</source>
+				<target>Publikationstypen (+ eigene Typen)</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.all" xml:space="preserve">
 				<source>All</source>
 				<target>Alles</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.article" xml:space="preserve">
-				<source>Article</source>
+				<source>Articles</source>
 				<target>Artikel</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.book" xml:space="preserve">
-				<source>Book</source>
-				<target>Buch</target>
+				<source>Books</source>
+				<target>Bücher</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.book_section" xml:space="preserve">
-				<source>Book Section</source>
+				<source>Book Sections</source>
 				<target>Buchkapitel</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.conference_item" xml:space="preserve">
-				<source>Conference Item</source>
-				<target>Konferenzbeitrag</target>
+				<source>Conference Items</source>
+				<target>Konferenzbeiträge</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.dissertation" xml:space="preserve">
-				<source>Dissertation</source>
-				<target>Dissertation</target>
+				<source>Dissertations</source>
+				<target>Dissertationen</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.encyclopedia_article" xml:space="preserve">
-				<source>Encyclopedia Article</source>
+				<source>Encyclopedia Articles</source>
 				<target>Enzyklopädieartikel</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.habilitation" xml:space="preserve">
-				<source>Habilitation</source>
-				<target>Habilitation</target>
+				<source>Habilitations</source>
+				<target>Habilitationen</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.journal" xml:space="preserve">
-				<source>Journal</source>
-				<target>Zeitschrift</target>
+				<source>Journals</source>
+				<target>Zeitschriften</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.other" xml:space="preserve">
 				<source>Other</source>
 				<target>Sonstiges</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.preprint" xml:space="preserve">
-				<source>Preprint</source>
-				<target>Preprint</target>
+				<source>Preprints</source>
+				<target>Preprints</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.report" xml:space="preserve">
-				<source>Report</source>
-				<target>Bericht</target>
+				<source>Reports</source>
+				<target>Berichte</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.review" xml:space="preserve">
-				<source>Review</source>
-				<target>Review</target>
+				<source>Reviews</source>
+				<target>Reviews</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.thesis" xml:space="preserve">
-				<source>Thesis</source>
-				<target>Abschlussarbeit</target>
+				<source>Theses</source>
+				<target>Abschlussarbeiten</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.research_paper" xml:space="preserve">
-				<source>Research Paper</source>
-				<target>Forschungspapier</target>
+				<source>Research Papers</source>
+				<target>Forschungspapiere</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.workshop_item" xml:space="preserve">
-				<source>Workshop Item</source>
-				<target>Workshop-Beitrag</target>
+				<source>Workshop Items</source>
+				<target>Workshop-Beiträge</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.masterthesis" xml:space="preserve">
-				<source>Masterthesis</source>
-				<target>Masterarbeit</target>
+				<source>Master Theses</source>
+				<target>Masterarbeiten</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.type.poster" xml:space="preserve">
-				<source>Poster</source>
+				<source>Posters</source>
 				<target>Poster</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.selecturl" xml:space="preserve">

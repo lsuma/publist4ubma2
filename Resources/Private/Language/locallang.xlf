@@ -76,55 +76,55 @@
 				<source>Authors</source>
 			</trans-unit>
 			<trans-unit id="book" xml:space="preserve">
-				<source>Book</source>
+				<source>Books</source>
 			</trans-unit>
 			<trans-unit id="article" xml:space="preserve">
-				<source>Article</source>
+				<source>Articles</source>
 			</trans-unit>
 			<trans-unit id="book_section" xml:space="preserve">
-				<source>Book Section</source>
+				<source>Book Sections</source>
 			</trans-unit>
 			<trans-unit id="dissertation" xml:space="preserve">
-				<source>Dissertation</source>
+				<source>Dissertations</source>
 			</trans-unit>
 			<trans-unit id="encyclopedia_article" xml:space="preserve">
-				<source>Encyclopedia Article</source>
+				<source>Encyclopedia Articles</source>
 			</trans-unit>
 			<trans-unit id="habilitation" xml:space="preserve">
-				<source>Habilitation</source>
+				<source>Habilitations</source>
 			</trans-unit>
 			<trans-unit id="journal" xml:space="preserve">
-				<source>Journal</source>
+				<source>Journale</source>
 			</trans-unit>
 			<trans-unit id="other" xml:space="preserve">
 				<source>Other</source>
 			</trans-unit>
 			<trans-unit id="preprint" xml:space="preserve">
-				<source>Preprint</source>
+				<source>Preprints</source>
 			</trans-unit>
 			<trans-unit id="report" xml:space="preserve">
-				<source>Report</source>
+				<source>Reports</source>
 			</trans-unit>
 			<trans-unit id="review" xml:space="preserve">
-				<source>Review</source>
+				<source>Reviews</source>
 			</trans-unit>
 			<trans-unit id="thesis" xml:space="preserve">
-				<source>Thesis</source>
+				<source>Theses</source>
 			</trans-unit>
 			<trans-unit id="research_paper" xml:space="preserve">
-				<source>Research Paper</source>
+				<source>Research Papers</source>
 			</trans-unit>
 			<trans-unit id="conference_item" xml:space="preserve">
-				<source>Conference Item</source>
+				<source>Conference Items</source>
 			</trans-unit>
 			<trans-unit id="workshop_item" xml:space="preserve">
-				<source>Workshop Item</source>
+				<source>Workshop Items</source>
 			</trans-unit>
 			<trans-unit id="master_thesis" xml:space="preserve">
-				<source>Master Thesis</source>
+				<source>Master Theses</source>
 			</trans-unit>
 			<trans-unit id="poster" xml:space="preserve">
-				<source>Poster</source>
+				<source>Posters</source>
 			</trans-unit>
 			<trans-unit id="and" xml:space="preserve">
 				<source>and</source>

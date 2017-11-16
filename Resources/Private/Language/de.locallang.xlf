@@ -100,71 +100,71 @@
 				<target>Autoren</target>
 			</trans-unit>
 			<trans-unit id="book" xml:space="preserve">
-				<source>Book</source>
-				<target>Buch</target>
+				<source>Books</source>
+				<target>Bücher</target>
 			</trans-unit>
 			<trans-unit id="article" xml:space="preserve">
-				<source>Article</source>
+				<source>Articles</source>
 				<target>Artikel</target>
 			</trans-unit>
 			<trans-unit id="book_section" xml:space="preserve">
-				<source>Book Section</source>
+				<source>Book Sections</source>
 				<target>Buchkapitel</target>
 			</trans-unit>
 			<trans-unit id="dissertation" xml:space="preserve">
-				<source>Dissertation</source>
-				<target>Dissertation</target>
+				<source>Dissertations</source>
+				<target>Dissertationen</target>
 			</trans-unit>
 			<trans-unit id="encyclopedia_article" xml:space="preserve">
-				<source>Encyclopedia Article</source>
-				<target>Enzyklopädieeintrag</target>
+				<source>Encyclopedia Articles</source>
+				<target>Enzyklopädieeinträge</target>
 			</trans-unit>
 			<trans-unit id="habilitation" xml:space="preserve">
-				<source>Habilitation</source>
-				<target>Habilitation</target>
+				<source>Habilitations</source>
+				<target>Habilitationen</target>
 			</trans-unit>
 			<trans-unit id="journal" xml:space="preserve">
-				<source>Journal</source>
-				<target>Journal</target>
+				<source>Journale</source>
+				<target>Journals</target>
 			</trans-unit>
 			<trans-unit id="other" xml:space="preserve">
 				<source>Other</source>
 				<target>Sonstiges</target>
 			</trans-unit>
 			<trans-unit id="preprint" xml:space="preserve">
-				<source>Preprint</source>
-				<target>Preprint</target>
+				<source>Preprints</source>
+				<target>Preprints</target>
 			</trans-unit>
 			<trans-unit id="report" xml:space="preserve">
-				<source>Report</source>
-				<target>Bericht</target>
+				<source>Reports</source>
+				<target>Berichte</target>
 			</trans-unit>
 			<trans-unit id="review" xml:space="preserve">
-				<source>Review</source>
-				<target>Review</target>
+				<source>Reviews</source>
+				<target>Reviews</target>
 			</trans-unit>
 			<trans-unit id="thesis" xml:space="preserve">
-				<source>Thesis</source>
-				<target>Abschlussarbeit</target>
+				<source>Theses</source>
+				<target>Abschlussarbeiten</target>
 			</trans-unit>
 			<trans-unit id="research_paper" xml:space="preserve">
-				<source>Research Paper</source>
-				<target>Forschungspapier</target>
+				<source>Research Papers</source>
+				<target>Forschungspapiere</target>
 			</trans-unit>
 			<trans-unit id="conference_item" xml:space="preserve">
-				<source>Conference Item</source>
-				<target>Konferenzbeitrag</target>
+				<source>Conference Items</source>
+				<target>Konferenzbeiträge</target>
 			</trans-unit>
 			<trans-unit id="workshop_item" xml:space="preserve">
-				<source>Workshop Item</source>
-				<target>Workshop-Beitrag</target>
+				<source>Workshop Items</source>
+				<target>Workshop-Beiträge</target>
 			</trans-unit>
 			<trans-unit id="master_thesis" xml:space="preserve">
-				<source>Master Thesis</source>
-				<target>Masterarbeit</target>
+				<source>Master Theses</source>
+				<target>Masterarbeiten</target>
 			</trans-unit>
 			<trans-unit id="poster" xml:space="preserve">
-				<source>Poster</source>
+				<source>Posters</source>
 				<target>Poster</target>
 			</trans-unit>
 			<trans-unit id="and" xml:space="preserve">
