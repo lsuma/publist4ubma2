@@ -1,0 +1,22 @@
+{
+	"name": "uma/uma-publist",
+	"type": "typo3-cms-extension",
+	"description": "University of Mannheim Publication Lists",
+	"license": [
+		"GPL-2.0+"
+	],
+	"keywords": [
+		"TYPO3 CMS",
+		"University of Mannheim",
+		"Publication Lists"
+	],
+	"replace": {
+		"uma-publist": "self.version",
+		"uma/uma-publist": "self.version"
+	},
+	"autoload": {
+		"psr-4": {
+			"UMA\\UmaPublist\\": "Classes/"
+		}
+	}
+}
