@@ -1,13 +1,16 @@
 .uma-publist-error {
  	background-color:#FACC2E;
+ 	padding:1rem;
 }
 
 .uma-publist-info {
  	background-color:#A9F5F2;
+ 	padding:1rem;
 }
 
 .uma-publist-debug {
 	background-color:#F2F2F2;
+ 	padding:1rem;
 }
 
 .uma-publist-yearnavi { 

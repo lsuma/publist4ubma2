@@ -129,6 +129,18 @@
 			<trans-unit id="and" xml:space="preserve">
 				<source>and</source>
 			</trans-unit>
+			<trans-unit id="error" xml:space="preserve">
+				<source>Error</source>
+			</trans-unit>
+			<trans-unit id="info" xml:space="preserve">
+				<source>Info</source>
+			</trans-unit>
+			<trans-unit id="error.no_publications_found" xml:space="preserve">
+				<source>No publications found</source>
+			</trans-unit>
+			<trans-unit id="error.select_title_author_or_department" xml:space="preserve">
+				<source>Please select least title, author or faculty and department</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

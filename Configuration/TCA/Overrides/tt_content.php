@@ -23,7 +23,7 @@ defined('TYPO3_MODE') or die();
 /***************
  * Flexform
  */
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['uma_publist_pi1'] = 'recursive,select_key,pages';
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['uma_publist_pi1'] = 'pi_flexform';
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue('uma_publist_pi1', 'FILE:EXT:uma_publist/Configuration/FlexForms/flexform_publist_pi1.xml');
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['umapublist_pi1'] = 'recursive,select_key,pages';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['umapublist_pi1'] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue('umapublist_pi1', 'FILE:EXT:uma_publist/Configuration/FlexForms/flexform_publist_pi1.xml');
 

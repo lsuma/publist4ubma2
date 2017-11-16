@@ -99,7 +99,7 @@
 				<source>Authors</source>
 				<target>Autoren</target>
 			</trans-unit>
-				<trans-unit id="book" xml:space="preserve">
+			<trans-unit id="book" xml:space="preserve">
 				<source>Book</source>
 				<target>Buch</target>
 			</trans-unit>
@@ -169,7 +169,23 @@
 			</trans-unit>
 			<trans-unit id="and" xml:space="preserve">
 				<source>and</source>
-				<source>und</source>
+				<target>und</target>
+			</trans-unit>
+			<trans-unit id="error" xml:space="preserve">
+				<source>Error</source>
+				<target>Fehler</target>
+			</trans-unit>
+			<trans-unit id="info" xml:space="preserve">
+				<source>Info</source>
+				<target>Info</target>
+			</trans-unit>
+			<trans-unit id="error.no_publications_found" xml:space="preserve">
+				<source>No publications found</source>
+				<target>Keine Publikationen gefunden</target>
+			</trans-unit>
+			<trans-unit id="error.select_title_author_or_department" xml:space="preserve">
+				<source>Please select least title, author or faculty and department</source>
+				<target>Bitte mindestens Titel, Autor oder Fakultät und Abteilung wählen</target>
 			</trans-unit>
 		</body>
 	</file>

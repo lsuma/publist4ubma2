@@ -31,4 +31,5 @@ if (TYPO3_MODE === 'BE') {
 
 }
 
-
+// Register for hook to show preview of tt_content element of list_type "umapublist_pi1" in page module
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']['umapublist_pi1'] = \UMA\UmaPublist\Hooks\DrawItem::class;

@@ -4,8 +4,8 @@
 		<header/>
 		<body>
 			<trans-unit id="pi1_title" xml:space="preserve">
-				<source>Display publications of Mannheim University Library</source>
-				<target>Publikationen der UB der Uni Mannheim anzeigen</target>
+				<source>Display publications of the University of Mannheim</source>
+				<target>Publikationen der Universität Mannheim anzeigen</target>
 			</trans-unit>
 			<trans-unit id="extmng.divisionsUrl" xml:space="preserve">
 				<source>URL of XML file for divisions</source>
@@ -44,7 +44,7 @@
 				<target>Publikationen</target>
 			</trans-unit>
 			<trans-unit id="list.header" xml:space="preserve">
-				<source>Sync Institutes and Chairs for plugin uma_publist</source>
+				<source>Synchronize institutes and chairs for publication list plugin</source>
 				<target>Institute und Lehrstühle synchronisieren</target>
 			</trans-unit>
 			<trans-unit id="list.description" xml:space="preserve">
@@ -273,8 +273,8 @@
 				<target>Für BIB (url oder eprintid)</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.years" xml:space="preserve">
-				<source>Years</source>
-				<target>Jahre</target>
+				<source>Timespan</source>
+				<target>Zeitraum</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.years.0" xml:space="preserve">
 				<source>Don't filter year</source>
@@ -306,7 +306,7 @@
 			</trans-unit>
 			<trans-unit id="pi1_flexform.years.7" xml:space="preserve">
 				<source>From last X years to last Y years ( X > Y)</source>
-				<target>Von vor X jahren bis vor Y Jahren</target>
+				<target>Von vor X Jahren bis vor Y Jahren</target>
 			</trans-unit>
 			<trans-unit id="pi1_flexform.yeartill" xml:space="preserve">
 				<source>Till year</source>

@@ -30,6 +30,7 @@ namespace UMA\UmaPublist\Controller;
 use UMA\UmaPublist\Utility\queryUrl;
 use UMA\UmaPublist\Utility\fileReader;
 use UMA\UmaPublist\Utility\xmlUtil;
+use UMA\UmaPublist\Utility\GeneralUtility;
 
 /**
  * PublistController
@@ -78,6 +79,16 @@ class PublistController extends BasicPublistController {
 		$cObj = $this->configurationManager->getContentObject();
 		$cElementId = $cObj->data['uid'];
 
+        // parse content element's flexform content
+        $flexformSettings = GeneralUtility::parseFlexForm($cObj->data['pi_flexform'], 'settings');
+        GeneralUtility::getInstitutesAndChairs($flexformSettings, $institutesAssoc, $chairsAssoc);
+        if(!$flexformSettings['title'] && !$flexformSettings['author'] && !count($chairsAssoc)) {
+            $errorMsg = \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate( 'error.select_title_author_or_department', 'uma_publist' );
+            $this->view->assign('errorMsg', $errorMsg);
+            $this->errorHandler->setError(1, $errorMsg);
+            return;
+        }
+
 		$this->checkIfRebuildPage($cElementId);
 		if ($this->errorHandler->getError()) {
 			$this->view->assign('errorMsg', $this->errorHandler->getErrorMsg());
@@ -108,7 +119,6 @@ class PublistController extends BasicPublistController {
 
 		$this->initSessionData($years, $types, $content);
 
-
 		$this->debugger->add('all OK');
 
 		$this->view->assignMultiple([
@@ -134,12 +144,12 @@ class PublistController extends BasicPublistController {
 	private function getPublicationsFromList($cElementId) {
 		$publist = $this->publistRepository->findFirstByCEid($cElementId);
 		if ($publist === NULL) {
-			$this->errorHandler->setError(1, "Error, not able to find Publication List in DB for Content Element " . $cElementId);
+			$this->errorHandler->setError(1, "Unable to find publication list in DB for content element " . $cElementId);
 			return 0;
 		}
 		$publications = $publist->getPublications();
 		if ($publications == '') {
-			$this->errorHandler->setError(1, "Error, no Publications in Publist");
+			$this->errorHandler->setError(1, "No publications in publication list");
 			return 0;
 		}
 		$content = array();
@@ -159,7 +169,7 @@ class PublistController extends BasicPublistController {
 			array_push($content, $publication);
 		}
 		if (count($content) <= 0) {
-			$this->errorHandler->setError(1, "Error, no valid publications found.");
+			$this->errorHandler->setError(1, "No valid publications found");
 			return 0;
 		}
 		return $content;
@@ -274,7 +284,8 @@ class PublistController extends BasicPublistController {
 		}
 
 		if ($xml->count() <= 0) {
-				$this->errorHandler->setError(1, 'No Publications in XML');
+				$errorMsg = \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate( 'error.no_publications_found', 'uma_publist' );
+				$this->errorHandler->setError(1, $errorMsg);
 				return $publications;
 		}
 		$this->debugger->add('Found ' . $xml->count() . ' items in xml');

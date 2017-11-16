@@ -89,8 +89,7 @@ class ItemsProcFunc {
 		$objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
 		$repository = $objectManager->get('UMA\\UmaPublist\\Domain\\Repository\\ChairRepository');
 		$configurationManager = $objectManager->get('TYPO3\\CMS\\Extbase\\Configuration\\ConfigurationManagerInterface');
-		$typoscript = $configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'uma_publist');
-		//\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($typoscript);
+		$typoscript = $configurationManager->getConfiguration(\TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS, 'umapublist', 'pi1');
 		$result = $repository->findAllByInst($config['config']['my_inst'], $typoscript['storagePid']);
 
 		// copy to config and sort imidily
