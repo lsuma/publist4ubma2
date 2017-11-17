@@ -24,14 +24,38 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']['UMA\UmaPublist\
    'additionalFields' => 'UMA\UmaPublist\Command\FileCommandControllerAdditionalFieldProvider'
 );
 
+// Register plugin icon
+$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+$iconRegistry->registerIcon(
+    'tx-umapublist-pi1',
+    \TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
+    ['source' => 'EXT:uma_publist/Resources/Public/Icons/ext_icon.png']
+);
 
-
-
+// Add wizard for plugin
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+  'mod {
+    wizards.newContentElement.wizardItems.plugins {
+      elements {
+        uma_publist {
+          iconIdentifier = tx-umapublist-pi1
+          title = LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:module.publicationLists
+          description = LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_title
+          tt_content_defValues {
+            CType = list
+            list_type = umapublist_pi1
+          }
+        }
+      }
+      show := addToList(umapublist_pi1)
+    }
+  }'
+);
 
 
 
 /*
-// For Backen (Scheduler Task)
+// For Backend (Scheduler Task)
 if(TYPO3_MODE === 'BE') {
  
     // Constants

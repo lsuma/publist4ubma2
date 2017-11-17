@@ -142,12 +142,14 @@
         <minitems>0</minitems>
         <multiple>0</multiple>
         <size>7</size>
-        <default>all</default>
+        <default>article,research_paper,conference_item,book,book_section</default>
         <items>
+         <!--
          <numIndex index="0">
           <numIndex index="0">LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.type.all</numIndex>
           <numIndex index="1">all</numIndex>
          </numIndex>
+         -->
          <numIndex index="1">
           <numIndex index="0">LLL:EXT:uma_publist/Resources/Private/Language/locallang_be.xlf:pi1_flexform.type.article</numIndex>
           <numIndex index="1">article</numIndex> 
@@ -343,7 +345,7 @@
         <maxitems>1</maxitems>
         <minitems>1</minitems>
         <size>1</size>
-        <default>0</default>
+        <default>5</default>
        </config>
       </TCEforms>
      </settings.years>
@@ -360,7 +362,7 @@
          <upper>3000</upper>
          <lower>1900</lower>
         </range>
-        <default>2000</default>
+        <default>2010</default>
        </config>
       </TCEforms>
      </settings.yearfrom>
@@ -377,7 +379,7 @@
          <upper>3000</upper>
          <lower>1900</lower>
         </range>
-        <default>2000</default>
+        <default>2010</default>
        </config>
       </TCEforms>
      </settings.yeartill>
@@ -394,7 +396,7 @@
          <upper>3000</upper>
          <lower>1900</lower>
         </range>
-        <default>2000</default>
+        <default>2010</default>
        </config>
       </TCEforms>
      </settings.yearthis>
@@ -411,7 +413,7 @@
          <upper>100</upper>
          <lower>0</lower>
         </range>
-        <default>2</default>
+        <default>5</default>
        </config>
       </TCEforms>
      </settings.lastyearfrom>
@@ -497,6 +499,7 @@
        <onChange>reload</onChange>
        <config>
         <type>check</type>
+        <default>1</default>
        </config>
       </TCEforms>
      </settings.institute20000>
@@ -699,6 +702,7 @@
           <numIndex index="1"></numIndex>
          </numIndex>
         </items>
+        <default>4</default>
        </config>
       </TCEforms>
      </settings.templateLayout>
@@ -782,7 +786,7 @@
         <maxitems>1</maxitems>
         <minitems>1</minitems>
         <size>1</size>
-        <default>0</default>
+        <default>3</default>
        </config>
       </TCEforms>
      </settings.splittypes>

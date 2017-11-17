@@ -59,9 +59,8 @@ class GeneralUtility implements SingletonInterface {
     */
    public static function parseFlexForm($flexform, $baseKey = '') {
         $flexFormArray = \TYPO3\CMS\Core\Utility\GeneralUtility::xml2array($flexform);
+        if(!is_array($flexFormArray)) return [];
         $flexFormSettings = [];
-        //$sDef = current($flexFormArray['data']);
-        //$lDef = array_keys($sDef);
         foreach ( $flexFormArray['data'] as $sheet => $data ) {
             foreach ( $data as $lang => $value ) {
                 foreach ( $value as $key => $val ) {
@@ -83,7 +82,6 @@ class GeneralUtility implements SingletonInterface {
                 }
             }
         }
-        //\TYPO3\CMS\Core\Utility\DebugUtility::debug($flexFormSettings);
         return $baseKey ? $flexFormSettings[$baseKey] : $flexFormSettings;
     }
 
